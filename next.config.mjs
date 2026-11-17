@@ -5,6 +5,13 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  serverExternalPackages: [
+    "@formatjs/intl-localematcher",
+    "@formatjs/icu-messageformat-parser",
+    "@formatjs/fast-memoize",
+    "@formatjs/ecma402-abstract",
+    "@formatjs/icu-skeleton-parser",
+  ],
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
