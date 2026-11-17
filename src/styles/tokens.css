@@ -1,0 +1,25 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --elevated: #f1f5f9;
+  --text: #0c1427;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --primary: #0284c7;
+  --primary-fg: #ffffff;
+  --success: #059669;
+  --warning: #d97706;
+}
+
+.dark {
+  --bg: #070d1a;
+  --surface: #0c1427;
+  --elevated: #111c38;
+  --text: #e6edf7;
+  --muted: #94a3b8;
+  --border: #1e2a4a;
+  --primary: #38bdf8;
+  --primary-fg: #070d1a;
+  --success: #34d399;
+  --warning: #fbbf24;
+}
