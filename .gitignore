@@ -16,6 +16,7 @@
 # misc
 .DS_Store
 *.pem
+rifat-personal-brand-site-spec.md
 
 # debug
 npm-debug.log*
