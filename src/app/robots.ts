@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/dev/"],
+      disallow: ["/api/"],
     },
     sitemap: "https://bmrifat.com/sitemap.xml",
   };

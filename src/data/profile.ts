@@ -1,117 +1,93 @@
 export const profile = {
-  name: "BM Rifat", // [TODO_CONFIRM_FULL_NAME]
-  title: {
-    en: "Software Engineer & Healthcare Tech Founder",
-    bn: "সফটওয়্যার প্রকৌশলী এবং স্বাস্থ্যপ্রযুক্তি উদ্যোক্তা",
+  name: "BM Rifat", // [TODO_CONFIRM_DISPLAY_NAME]
+  tagline: {
+    en: "Founder & CEO of ShasthoSathi and DocClinic.",
+    bn: "স্বাস্থ্য সাথী এবং ডকক্লিনিকের প্রতিষ্ঠাতা ও প্রধান নির্বাহী।",
   },
-  roles: {
-    en: "Founder & CEO at ShasthoSathi · Founder at DocClinic",
-    bn: "প্রতিষ্ঠাতা ও প্রধান নির্বাহী — স্বাস্থ্য সাথী · ডকক্লিনিক",
+  bio: {
+    en: "I build Bengali-first healthcare software for Bangladesh. I'm also a CSE student at Dhaka International University and lead communication and events at the DIU CSE Speakers Club.",
+    bn: "বাংলাদেশের জন্য বাংলা-ভিত্তিক স্বাস্থ্য সফটওয়্যার তৈরি করছি। পাশাপাশি ঢাকা ইন্টারন্যাশনাল ইউনিভার্সিটিতে (DIU) সিএসই অধ্যয়ন করছি এবং ডিআইইউ সিএসই স্পিকার্স ক্লাবের যোগাযোগ ও ইভেন্টের দায়িত্ব পালন করছি।",
   },
-  positioning: {
-    en: "Building healthcare technology for Bangladesh — Bengali-first, AI-assisted, production-grade.",
-    bn: "বাংলাদেশের জন্য স্বাস্থ্যপ্রযুক্তি গড়ছি — বাংলা-ভিত্তিক, AI-সহায়ক, প্রোডাকশন-মানের।",
-  },
-  education: {
-    degree: {
-      en: "B.Sc. in Computer Science and Engineering",
-      bn: "কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং (বি.এসসি)",
-    },
-    institution: {
-      en: "Daffodil International University (DIU)",
-      bn: "ড্যাফোডিল ইন্টারন্যাশনাল ইউনিভার্সিটি",
-    },
-    status: {
-      en: "Undergraduate",
-      bn: "স্নাতক অধ্যয়নরত",
-    },
-  },
-  community: {
-    role: {
-      en: "Organising Secretary",
-      bn: "সাংগঠনিক সম্পাদক",
-    },
-    organization: {
-      en: "DIU CSE Speakers Club",
-      bn: "ডিআইইউ সিএসই স্পিকার্স ক্লাব",
-    },
-  },
-  location: {
-    en: "Dhaka, Bangladesh",
-    bn: "ঢাকা, বাংলাদেশ",
-  },
-  shortBio: {
-    en: "BM Rifat is a Bangladeshi software engineer, entrepreneur, and CSE student at Daffodil International University. He builds production-grade, Bengali-first healthcare software including ShasthoSathi and DocClinic.",
-    bn: "বিএম রিফাত একজন বাংলাদেশি সফটওয়্যার প্রকৌশলী, উদ্যোক্তা এবং ড্যাফোডিল ইন্টারন্যাশনাল ইউনিভার্সিটির সিএসই শিক্ষার্থী। তিনি স্বাস্থ্য সাথী ও ডকক্লিনিক-সহ বাংলা-ভিত্তিক স্বাস্থ্যপ্রযুক্তি তৈরি করছেন।",
-  },
-  longBio: {
-    en: "BM Rifat is a software engineer and healthtech founder based in Dhaka, Bangladesh. Currently studying Computer Science & Engineering at Daffodil International University, he serves as the Organising Secretary of the DIU CSE Speakers Club. As Founder & CEO of ShasthoSathi and DocClinic, Rifat focuses on solving critical healthcare access barriers across Bangladesh through production-grade full-stack engineering, tenant isolation security, and safety-governed AI cascades.",
-    bn: "বিএম রিফাত ঢাকাভিত্তিক একজন সফটওয়্যার প্রকৌশলী ও স্বাস্থ্যপ্রযুক্তি উদ্যোক্তা। ড্যাফোডিল ইন্টারন্যাশনাল ইউনিভার্সিটিতে সিএসই অধ্যয়নের পাশাপাশি তিনি ডিআইইউ সিএসই স্পিকার্স ক্লাবের সাংগঠনিক সম্পাদক হিসেবে দায়িত্ব পালন করছেন। স্বাস্থ্য সাথী এবং ডকক্লিনিকের প্রতিষ্ঠাতা ও সিইও হিসেবে তিনি বাংলাদেশের স্বাস্থ্যসেবার জটিল সংকটগুলো সমাধানে নিরাপদ ও প্রোডাকশন-গ্রেড সফটওয়্যার নির্মাণ করছেন।",
-  },
-  personalMotivation: {
-    en: "In Bangladesh, millions struggle to navigate diagnostic reports and access reliable clinical guidance due to language barriers, overcrowded clinics, and fragmented medical records. I build systems where clinical safety, Bengali linguistic context, and bulletproof engineering take precedence over novelty.",
-    bn: "বাংলাদেশে ভাষা ও সচেতনতার ঘাটতি, ক্লিনিকের অতিরিক্ত ভিড় এবং ছড়িয়ে-ছিটিয়ে থাকা প্রেসক্রিপশনের কারণে রোগীরা প্রতিনিয়ত জটিলতায় পড়েন। আমি এমন প্রযুক্তি তৈরি করছি যা নিরাপদ, নির্ভরযোগ্য এবং প্রতিটি সাধারণ মানুষের বোধগম্য মাতৃভাষায় স্বাস্থ্যসেবাকে সহজ করে তোলে।",
-  },
-  credibilityPoints: [
+  institution: "Dhaka International University (DIU)",
+  communityRole: "Organising Secretary, DIU CSE Speakers Club",
+  email: "hello@TODO_PROVIDE_EMAIL", // [TODO_PROVIDE_EMAIL]
+  github: "https://github.com/bmrifat",
+  linkedin: "https://linkedin.com/in/TODO_PROVIDE_LINKEDIN", // [TODO_PROVIDE_LINKEDIN]
+
+  interests: [
     {
-      en: "Bengali-first health AI with multi-model fallback cascade",
-      bn: "মাল্টি-মডেল ফলব্যাক ক্যাসকেড সহ বাংলা-ভিত্তিক স্বাস্থ্য এআই",
+      lead: { en: "Healthcare access in Bangladesh.", bn: "বাংলাদেশের স্বাস্থ্যসেবায় অন্তর্ভুক্তি।" },
+      desc: { en: "Language and cost are real barriers.", bn: "ভাষা ও আর্থিক অসচ্ছলতা এখানে প্রধান প্রতিবন্ধক।" },
     },
     {
-      en: "Multi-tenant clinic management system with strict role enforcement",
-      bn: "নিরাপদ রোল এবং টেন্যান্ট আইসোলেশন সহ মাল্টি-টেন্যান্ট ক্লিনিক ম্যানেজমেন্ট সিস্টেম",
+      lead: { en: "AI that is useful, safe and honest about its limits.", bn: "বাস্তবসম্মত, নিরাপদ ও সৎ এআই।" },
+      desc: { en: "Clinical guardrails must supersede hype.", bn: "মেডিকেল সেফটিতে চটকদার দাবির চেয়ে কঠোর ফিল্টার জরুরি।" },
     },
     {
-      en: "Full product lifecycle: architecture, code, security, and production deployment",
-      bn: "সম্পূর্ণ প্রোডাক্ট লাইফসাইকেল: আর্কিটেকচার, কোডিং, সিকিউরিটি এবং ডেপ্লয়মেন্ট",
+      lead: { en: "Production-grade software.", bn: "প্রোডাকশন-গ্রেড সফটওয়্যার।" },
+      desc: { en: "Architecture, security, and reliability over quick hacks.", bn: "টেকসই আর্কিটেকচার, ডেটা আইসোলেশন ও নির্ভরযোগ্যতা।" },
+    },
+    {
+      lead: { en: "Education technology.", bn: "শিক্ষাপ্রযুক্তি।" },
+      desc: { en: "Democratizing access for national curriculum students.", bn: "জাতীয় পাঠ্যক্রমের সাধারণ শিক্ষার্থীদের জন্য সুযোগ সৃষ্টি।" },
+    },
+    {
+      lead: { en: "Leadership, public speaking and community building.", bn: "নেতৃত্ব, পাবলিক স্পিকিং ও কমিউনিটি গঠন।" },
+      desc: { en: "Mentoring engineers to communicate system trade-offs.", bn: "প্রকৌশলীদের যোগাযোগ ও যুক্তি উপস্থাপন দক্ষতায় রূপান্তর।" },
     },
   ],
-  principles: [
+
+  also: [
     {
-      title: {
-        en: "Bengali-First UX",
-        bn: "বাংলা-কেন্দ্রিক অভিজ্ঞতা",
+      name: "Nationalian",
+      desc: {
+        en: "EdTech for National University students.",
+        bn: "জাতীয় বিশ্ববিদ্যালয়ের শিক্ষার্থীদের জন্য শিক্ষাপ্রযুক্তি প্ল্যাটফর্ম।",
       },
-      description: {
-        en: "Not a superficial translation layer. Tailored typography, TTS voice output, and natural clinical phrasing for Bangladeshi patients.",
-        bn: "শুধুমাত্র সাধারণ অনুবাদ নয়; দেশীয় ফন্ট, টিটিএস অডিও এবং সাধারণ রোগীদের জন্য সহজবোধ্য পরিভাষা।",
+      role: {
+        en: "Marketing Strategy [CONFIRM title]",
+        bn: "মার্কেটিং স্ট্র্যাটেজি [CONFIRM]",
       },
     },
     {
-      title: {
-        en: "Security & Privacy by Default",
-        bn: "নিরাপত্তা ও গোপনীয়তা প্রথম",
+      name: "Softstation",
+      desc: {
+        en: "Websites for schools, colleges and madrasas.",
+        bn: "স্কুল, কলেজ ও মাদ্রাসার জন্য প্রাতিষ্ঠানিক ওয়েব পোর্টাল।",
       },
-      description: {
-        en: "Tenant query isolation, sanitized input boundaries, zero patient PII exposure, and server-side role validation.",
-        bn: "টেন্যান্ট কুয়েরি গার্ড, স্যানিটাইজেশন, রোগীর সংবেদনশীল তথ্যের সর্বোচ্চ সুরক্ষা এবং সার্ভার-সাইড রোল যাচাই।",
-      },
-    },
-    {
-      title: {
-        en: "Production-Grade Engineering",
-        bn: "প্রোডাকশন-মানের ইঞ্জিনিয়ারিং",
-      },
-      description: {
-        en: "Deterministic fallbacks, strict TypeScript, comprehensive error states, concurrency safety, and zero fragile hacks.",
-        bn: "ডিটারমিনিস্টিক ফলব্যাক, কঠোর টাইপস্ক্রিপ্ট, নিখুঁত এরর হ্যান্ডলিং এবং রিয়েল-ওয়ার্ল্ড স্কেলেবিলিটি।",
+      role: {
+        en: "Client Solutions [CONFIRM title]",
+        bn: "ক্লায়েন্ট সলিউশনস [CONFIRM]",
       },
     },
     {
-      title: {
-        en: "Honest Scope",
-        bn: "সততা ও স্বচ্ছতা",
+      name: "DIU CSE Speakers Club",
+      desc: {
+        en: "Organising Secretary.",
+        bn: "সাংগঠনিক সম্পাদক।",
       },
-      description: {
-        en: "Clear differentiation between what is live, what is in active build, and what is planned. No inflated metrics or hype.",
-        bn: "কোন ফিচারটি লাইভ, কোনটি ডেভেলপমেন্টে এবং কোনটি পরিকল্পনায় রয়েছে তার খোলামেলা উপস্থাপনা। অতিরঞ্জনহীন বাস্তবতা।",
+      role: {
+        en: "Communication & Events Lead",
+        bn: "যোগাযোগ ও ইভেন্ট পরিচালনা",
       },
     },
   ],
-  // Verified metrics only. Placeholders for user to confirm:
-  metrics: {
-    clinicsServed: "TODO_PROVIDE_CLINICS_COUNT",
-    reportsAnalysed: "TODO_PROVIDE_REPORTS_COUNT",
-    communityAttendees: "TODO_PROVIDE_ATTENDEES_COUNT",
+
+  now: {
+    lastUpdated: "November 2024",
+    bullets: [
+      {
+        en: "Refining ShasthoSathi's multi-model AI fallback cascade with Bengali Edge TTS.",
+        bn: "বাংলা ভয়েস সিন্থেসিস সহ স্বাস্থ্য সাথীর মাল্টি-মডেল এআই ফলব্যাক আর্কিটেকচার উন্নয়ন।",
+      },
+      {
+        en: "Engineering prescription OCR and concurrency-safe queue locks in DocClinic.",
+        bn: "ডকক্লিনিকে প্রেসক্রিপশন ওসিআর ও কনকারেন্সি-সেফ অ্যাপয়েন্টমেন্ট শিডিউলিং।",
+      },
+      {
+        en: "Final year Computer Science coursework at Dhaka International University (DIU).",
+        bn: "ঢাকা ইন্টারন্যাশনাল ইউনিভার্সিটিতে (DIU) সিএসই শেষ বর্ষের পাঠ্যক্রম।",
+      },
+    ],
   },
 };

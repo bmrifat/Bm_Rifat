@@ -17,6 +17,7 @@
 .DS_Store
 *.pem
 rifat-personal-brand-site-spec.md
+rifat-personal-site-spec-v2-minimal.md
 
 # debug
 npm-debug.log*

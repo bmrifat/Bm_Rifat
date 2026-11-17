@@ -1,304 +1,178 @@
-import { Venture } from "@/lib/validators";
+export interface MinimalVenture {
+  slug: string;
+  name: { en: string; bn: string };
+  tagline: { en: string; bn: string };
+  status: "live" | "building" | "planned";
+  statusText: { en: string; bn: string };
+  whatItIs: { en: string; bn: string };
+  why: { en: string; bn: string };
+  whatItDoes: { en: string[]; bn: string[] };
+  plannedFeatures: { en: string[]; bn: string[] };
+  builtWith: string;
+  engineeringNotes: { en: string[]; bn: string[] };
+  links: {
+    label: { en: string; bn: string };
+    url: string;
+    isExternal: boolean;
+  }[];
+}
 
-export const ventures: Venture[] = [
+export const ventures: MinimalVenture[] = [
   {
     slug: "shasthosathi",
     name: {
-      en: "ShasthoSathi",
-      bn: "স্বাস্থ্য সাথী",
+      en: "ShasthoSathi (স্বাস্থ্য সাথী)",
+      bn: "স্বাস্থ্য সাথী (ShasthoSathi)",
     },
     tagline: {
-      en: "Bengali-first, AI-assisted healthcare platform making medical insights accessible to every patient.",
-      bn: "বাংলা-ভিত্তিক, এআই-সহায়ক স্বাস্থ্য প্ল্যাটফর্ম যা সাধারণ রোগীদের কাছে স্বাস্থ্যসেবাকে সহজ করে তোলে।",
+      en: "Bengali-language health platform for patients.",
+      bn: "সাধারণ রোগীদের জন্য বাংলা-ভিত্তিক স্বাস্থ্য প্ল্যাটফর্ম।",
     },
     status: "live",
-    role: {
-      en: "Founder & Lead Architect",
-      bn: "প্রতিষ্ঠাতা ও প্রধান স্থপতি",
+    statusText: {
+      en: "Live",
+      bn: "লাইভ",
     },
-    period: "2024 – Present",
-    featured: true,
-    problem: {
-      en: "In Bangladesh, over 80% of patients cannot interpret their diagnostic lab reports or doctor's prescriptions due to medical jargon and language barriers. Furthermore, emergency services (blood, oxygen, ambulance) remain deeply fragmented across Facebook groups and word of mouth.",
-      bn: "বাংলাদেশে সিংহভাগ রোগী ভাষার জটিলতা ও ডাক্তারের হস্তাক্ষরের কারণে প্রেসক্রিপশন ও ল্যাব টেস্টের রিপোর্ট বুঝতে পারেন না। একইসাথে জরুরি প্রয়োজনে অ্যাম্বুলেন্স, রক্তদাতা কিংবা মানসিক স্বাস্থ্যসেবা খুঁজে পাওয়া অত্যন্ত কষ্টসাধ্য।",
+    whatItIs: {
+      en: "A patient-facing digital health companion built for Bangladesh. It translates clinical laboratory reports, prescriptions, and symptoms into plain, easily understood Bengali, supplemented with speech synthesis.",
+      bn: "বাংলাদেশের সাধারণ রোগীদের জন্য তৈরি একটি ডিজিটাল স্বাস্থ্য সঙ্গী। এটি জটিল মেডিকেল ল্যাব রিপোর্ট, প্রেসক্রিপশন ও উপসর্গগুলোকে সহজ বাংলায় ব্যাখ্যা করে এবং অডিওর মাধ্যমে শুনিয়ে দেয়।",
     },
-    audience: {
-      en: "Patients, families, and caregivers across Bangladesh seeking clear, reliable health interpretation in their native language.",
-      bn: "বাংলাদেশের সকল সাধারণ রোগী এবং তাদের পরিবার, যারা সহজ বাংলায় সঠিক স্বাস্থ্য নির্দেশিকা পেতে চান।",
+    why: {
+      en: "In Bangladesh, medical reports are written in dense English terminology with clinical jargon that over 80% of patients cannot understand. Furthermore, critical emergency services (ambulances, blood donors, mental health helplines) remain scattered and chaotic during crises.",
+      bn: "বাংলাদেশে সিংহভাগ মেডিকেল রিপোর্ট ও প্রেসক্রিপশন ইংরেজিতে জটিল পরিভাষায় লেখা থাকে, যা অধিকাংশ রোগীর বোধগম্য নয়। এছাড়া জরুরি প্রয়োজনে রক্তদাতা বা অ্যাম্বুলেন্স খুঁজে পাওয়া অত্যন্ত কষ্টসাধ্য।",
     },
-    solution: {
-      en: "A comprehensive health companion that combines AI report analysis with Bengali text-to-speech, symptom concordances, and a dedicated emergency directory. Built with medical-safety guardrails so AI guides without diagnosing or prescribing doses.",
-      bn: "একটি নির্ভরযোগ্য স্বাস্থ্য প্ল্যাটফর্ম যা কৃত্রিম বুদ্ধিমত্তার মাধ্যমে ল্যাব রিপোর্ট বিশ্লেষণ, বাংলা অডিও পাঠ এবং জরুরি সেবা ডিরেক্টরি সরবরাহ করে — কঠোর চিকিৎসা নীতিমালার অধীনে।",
-    },
-    stack: [
-      "Next.js 15 (App Router)",
-      "TypeScript",
-      "Tailwind CSS",
-      "Prisma ORM",
-      "Cloudflare R2",
-      "Google Gemini Pro / Flash",
-      "Edge TTS (Bengali Audio)",
-      "NextAuth.js",
-      "Zod",
-    ],
-    highlights: {
+    whatItDoes: {
       en: [
-        "Multi-model AI fallback cascade with latency timers and circuit-breaker failovers.",
-        "Clinical safety guardrail: models are strictly prevented from recommending drug dosages or absolute diagnoses.",
-        "Bengali speech synthesis (Edge TTS) allowing low-literacy patients to listen to their structured lab report summaries.",
-        "Comprehensive Emergency Hub: curated directory of ambulances, blood donors, 24/7 pharmacies, and national helplines.",
-        "Admin-curated diagnostic test price directory to protect patients from predatory pricing.",
+        "AI analysis of laboratory reports, handwritten prescriptions, and diagnostic images with structured findings.",
+        "Bengali speech synthesis (Edge TTS) allowing low-literacy patients to listen to their findings.",
+        "Symptom checker assessing duration, severity, and concordance without dispensing unauthorized prescriptions.",
+        "Emergency hub with verified directories for ambulances, 24/7 pharmacies, blood donors, and national helplines.",
+        "Curated clinical cases demonstration gallery.",
       ],
       bn: [
-        "টাইমআউট এবং হেলথ-ট্র্যাকিং সহ মাল্টি-মডেল এআই ফলব্যাক ক্যাসকেড আর্কিটেকচার।",
-        "ক্লিনিক্যাল সেফটি গার্ডরেল: এআই কখনোই সংবেদনশীল ক্ষেত্রে প্রেসক্রিপশন বা নির্দিষ্ট ওষুধের ডোজ নির্ধারণ করে না।",
-        "সহজেই শোনার জন্য বাংলা ভয়েস সিন্থেসিস (TTS), যা কম পড়াশোনা জানা রোগীদেরও সহায়তা করে।",
+        "ল্যাব রিপোর্ট ও প্রেসক্রিপশনের এআই স্ক্যানিং এবং পয়েন্ট-আকারে সহজ ফলাফল উপস্থাপন।",
+        "কম শিক্ষিত রোগীদের সুবিধার্থে সম্পূর্ণ বাংলা অডিও পাঠ (Edge TTS)।",
+        "উপসর্গ বিশ্লেষণ ও প্রাথমিক সচেতনতা নির্দেশিকা — কোনো অননুমোদিত ওষুধের ডোজ ছাড়াই।",
         "জরুরি কেন্দ্র: অ্যাম্বুলেন্স, রক্তদাতা, সার্বক্ষণিক ফার্মেসি ও জাতীয় হটলাইনের সংরক্ষিত তালিকা।",
-        "ডায়াগনস্টিক টেস্টের সঠিক বাজারদর জানার জন্য নির্ভরযোগ্য অ্যাডমিন-ভেরিফায়েড মূল্য তালিকা।",
+        "কাল্পনিক ও সিন্থেটিক ডেটা ভিত্তিক ডেমো কেস গ্যালারি।",
       ],
     },
-    security: {
+    plannedFeatures: {
       en: [
-        "Encrypted report storage via signed Cloudflare R2 URLs with expiration limits.",
-        "Zero long-term retention of unanonymized patient medical imaging on third-party AI endpoints.",
-        "Input sanitization, file-signature MIME verification, and strict payload size limits.",
-      ],
-      bn: [
-        "ক্লাউডফ্লেয়ার R2 এর সাময়িক সাইনড ইউআরএল এর মাধ্যমে নিরাপদ ফাইল স্টোরেজ।",
-        "তৃতীয় পক্ষের এআই সার্ভারে রোগীর নাম বা সংবেদনশীল তথ্যের কোনো দীর্ঘমেয়াদী সংরক্ষণ নেই।",
-        "ইনপুট স্যানিটাইজেশন এবং কঠোর ফাইল সিগনেচার যাচাই।",
-      ],
-    },
-    roadmap: {
-      en: [
-        "Women's Health Corner (safe, private reproductive & maternal guidance).",
-        "Better Me: Crisis-safe mental wellness and confidential therapist booking.",
-        "Offline Progressive Web App (PWA) for rural clinic connectivity.",
-        "Integrated Family Health Vault with chronologically indexed lab records.",
+        "Women's Corner (private, culturally aligned maternal & reproductive guidance).",
+        "Better Me: Crisis-safe mental wellness and confidential therapist directory.",
+        "Diagnostic test price range directory with verified nearby diagnostic centers.",
+        "Telemedicine consultation bridge and offline-first PWA mode.",
+        "Family health record vault with chronological investigation histories.",
       ],
       bn: [
         "উইমেন্স কর্নার: নারীদের প্রজনন ও মাতৃত্বকালীন স্বাস্থ্য বিষয়ে নিরাপদ ও গোপনীয় পরামর্শ।",
         "বেটার মি: মানসিক সুস্থতা এবং বিশ্বস্ত কাউন্সেলরদের সাথে যোগাযোগের মাধ্যম।",
-        "ইন্টারনেটহীন প্রত্যন্ত অঞ্চলের জন্য অফলাইন পিডব্লিউএ (PWA) মোড।",
-        "পুরো পরিবারের মেডিকেল হিস্ট্রি ক্রমানুসারে সংরক্ষণ করার ডিজিটাল ভল্ট।",
+        "ডায়াগনস্টিক টেস্টের সঠিক বাজারদর জানার জন্য নির্ভরযোগ্য মূল্য তালিকা।",
+        "টেলিমেডিসিন সেবা এবং ইন্টারনেটহীন প্রত্যন্ত অঞ্চলের জন্য অফলাইন পিডব্লিউএ মোড।",
+        "পরিবারের সদস্যদের পুরনো মেডিকেল রেকর্ড সাজিয়ে রাখার ডিজিটাল ভল্ট।",
       ],
     },
-    lessons: {
+    builtWith: "Next.js 15, TypeScript, Tailwind CSS, Prisma, NextAuth, Zod, Cloudflare R2, Google Gemini, Edge TTS.",
+    engineeringNotes: {
       en: [
-        "AI temperature tuning is insufficient for medical safety; hardcoded post-processing regex and rule-based interceptors are mandatory.",
-        "Local latency matters more than maximum model parameter size for mobile web users on 4G in Bangladesh.",
+        "Multi-model AI fallback cascade: Fast vision OCR runs on tight latency budgets (3.5s) with automatic failover to higher-capacity models.",
+        "Clinical safety guardrail: Deterministic post-processing regex strips any drug doses or definitive diagnoses before payload hits the client.",
+        "Trust over novelty: Diagnostic test price ranges are strictly admin-curated from verified centres rather than hallucinated by AI.",
       ],
       bn: [
-        "মেডিকেল নিরাপত্তার জন্য শুধুমাত্র এআই প্রম্পট যথেষ্ট নয়; রুল-ভিত্তিক ফিল্টার ও পোস্ট-প্রসেসিং অপরিহার্য।",
-        "বাংলাদেশের মোবাইল নেটওয়ার্কে সবচেয়ে ভারী মডেলের চেয়ে দ্রুত রেসপন্স ও স্থিতিশীলতা বেশি কার্যকর।",
+        "মাল্টি-মডেল ফলব্যাক ক্যাসকেড: ৩.৫ সেকেন্ডের টাইমআউট ও স্বয়ংক্রিয় মডেল ফেইলওভার।",
+        "ক্লিনিক্যাল সেফটি গার্ডরেল: এআই যাতে রোগীদের স্ক্রিনে কোনো ভুল ওষুধের ডোজ না দেয় তার জন্য কোড-লেভেল ফিল্টার।",
+        "নির্ভরযোগ্যতা প্রথম: ডায়াগনস্টিক টেস্টের মূল্য এআই দিয়ে আন্দাজে তৈরি না করে অ্যাডমিন-ভেরিফায়েড রাখা হয়েছে।",
       ],
     },
     links: [
       {
-        label: { en: "Live Platform (TODO_CONFIRM_URL)", bn: "লাইভ ওয়েবসাইট (TODO_CONFIRM_URL)" },
+        label: { en: "Visit Website (TODO_CONFIRM_URL)", bn: "ওয়েবসাইট দেখুন (TODO_CONFIRM_URL)" },
         url: "https://shasthosathi.com", // [TODO_CONFIRM_SHASTHOSATHI_URL]
-        type: "live",
+        isExternal: true,
+      },
+      {
+        label: { en: "Contact for Demo", bn: "ডেমো অনুরোধ করুন" },
+        url: "/contact",
+        isExternal: false,
       },
     ],
   },
   {
     slug: "docclinic",
     name: {
-      en: "DocClinic",
-      bn: "ডকক্লিনিক",
+      en: "DocClinic (Doctor Management System)",
+      bn: "ডকক্লিনিক (ডাক্তার ও ক্লিনিক ম্যানেজমেন্ট)",
     },
     tagline: {
-      en: "Multi-tenant clinic OS and smart prescription desk for doctors and healthcare practices in Bangladesh.",
-      bn: "বাংলাদেশের ডাক্তার এবং ক্লিনিকসমূহের জন্য মাল্টি-টেন্যান্ট ক্লিনিক ম্যানেজমেন্ট ও স্মার্ট প্রেসক্রিপশন সফটওয়্যার।",
+      en: "Multi-tenant clinic software for doctors and chambers.",
+      bn: "ডাক্তার ও চেম্বারের জন্য মাল্টি-টেন্যান্ট ক্লিনিক সফটওয়্যার।",
     },
     status: "building",
-    role: {
-      en: "Co-Founder & System Architect",
-      bn: "সহ-প্রতিষ্ঠাতা ও সিস্টেম আর্কিটেক্ট",
+    statusText: {
+      en: "In development",
+      bn: "চলমান কাজ",
     },
-    period: "2024 – Present",
-    featured: true,
-    problem: {
-      en: "Independent clinics and chambers in Bangladesh rely on paper ledgers and manual queues. Patient histories get lost, doctor consultation time is wasted on repetitive writing, and receptionists struggle with double-booked serials.",
-      bn: "বাংলাদেশের সিংহভাগ ব্যক্তিগত চেম্বার ও ক্লিনিক এখনো কাগুজে খাতার ওপর নির্ভরশীল। ফলে রোগীর ইতিহাস হারিয়ে যায়, সিরিয়াল নিয়ে বিশৃঙ্খলা তৈরি হয় এবং প্রেসক্রিপশন লিখতে ডাক্তারদের অতিরিক্ত সময় ব্যয় হয়।",
+    whatItIs: {
+      en: "A cloud clinical operating system built for independent doctors and outpatient clinics in Bangladesh. It streamlines prescription drafting, patient queues, EHR histories, and chamber administration.",
+      bn: "বাংলাদেশের চিকিৎসকদের জন্য তৈরি ক্লাউড ক্লিনিক অপারেটিং সিস্টেম। এটি দ্রুত প্রেসক্রিপশন তৈরি, সিরিয়াল ও রোগী হিস্ট্রি ম্যানেজমেন্ট সহজ করে তোলে।",
     },
-    audience: {
-      en: "Specialist doctors, chamber assistants, and multi-doctor outpatient clinics across Bangladesh.",
-      bn: "বিশেষজ্ঞ চিকিৎসক, ব্যক্তিগত চেম্বার এবং ছোট-মাঝারি ক্লিনিক কর্তৃপক্ষ।",
+    why: {
+      en: "Most clinical chambers in Bangladesh still rely on handwritten paper ledgers. Patient medical histories are routinely lost, receptionists struggle with double-booked serials, and doctors spend 30-40% of consultation time repeatedly handwriting medication names.",
+      bn: "বাংলাদেশের অধিকাংশ চেম্বার এখনো কাগুজে খাতার ওপর নির্ভরশীল। ফলে রোগীর ইতিহাস হারিয়ে যায়, সিরিয়াল নিয়ে বিশৃঙ্খলা তৈরি হয় এবং প্রেসক্রিপশন লিখতে ডাক্তারদের অতিরিক্ত সময় ব্যয় হয়।",
     },
-    solution: {
-      en: "A robust SaaS enabling instant prescription generation with medication auto-complete, optical recognition (OCR) of previous handwritten notes, concurrency-safe patient queues, and isolated clinic tenancy.",
-      bn: "একটি আধুনিক ক্লাউড সফটওয়্যার যার মাধ্যমে দ্রুত প্রেসক্রিপশন তৈরি, পূর্ববর্তী কাগজপত্রের এআই স্ক্যানিং এবং নিশ্ছিদ্র সিরিয়াল ম্যানেজমেন্ট নিশ্চিত হয়।",
-    },
-    stack: [
-      "Next.js 15 (App Router)",
-      "TypeScript",
-      "Tailwind CSS (Clinical Tokens)",
-      "React Query (@tanstack)",
-      "React Hook Form",
-      "Node.js / Express",
-      "MySQL with Tenant Guards",
-      "JWT httpOnly Cookies",
-      "Google Gemini Flash (OCR)",
-    ],
-    highlights: {
+    whatItDoes: {
       en: [
-        "High-speed Prescription Desk with instant drug dosage templates and clinical investigation presets.",
-        "Handwritten prescription & lab OCR powered by Gemini Flash vision pipeline.",
-        "Concurrency-safe serial allocation preventing collision under simultaneous receptionist bookings.",
-        "Hybrid appointment scheduling: strict serial order combined with dynamic estimated consultation windows.",
-        "Server-enforced RBAC distinguishing Doctor, Receptionist, and Administrative operations.",
+        "High-speed Prescription Desk with Bangladesh brand medicine autocomplete, dosage presets, and instant print/PDF export.",
+        "AI optical character recognition (OCR) extracting details from past handwritten prescriptions and lab reports.",
+        "Patient appointment queue and longitudinal EHR timeline.",
+        "Server-enforced Role-Based Access Control (RBAC) separating Doctor and Receptionist operational boundaries.",
+        "Multi-tenant database isolation preventing cross-chamber data visibility.",
       ],
       bn: [
-        "দ্রুত প্রেসক্রিপশন লেখার উপযোগী ড্রাগ অটো-কমপ্লিট এবং ল্যাব টেস্টের তৈরি টেমপ্লেট।",
+        "দেশীয় ওষুধের তালিকা, সঠিক ডোজ ও টেস্ট ইনভেস্টিগেশন সহ দ্রুত প্রেসক্রিপশন তৈরির ডেস্ক।",
         "হাতে লেখা পুরনো প্রেসক্রিপশন ও রিপোর্টের জন্য হাই-স্পিড এআই ওসিআর (OCR)।",
-        "একই সাথে একাধিক সহকারী সিরিয়াল বুক করলেও যাতে কোনো সংঘর্ষ না ঘটে তার নির্ভরযোগ্য লক মেকানিজম।",
-        "সিরিয়াল এবং সম্ভাব্য সময়ের সুষম সমন্বয়ে প্রস্তুত স্মার্ট শিডিউলিং।",
+        "সিরিয়াল ও রোগীর সম্পূর্ণ পূর্ববর্তী মেডিকেল ইতিহাস।",
         "ডাক্তার এবং রিসেপশনিস্টের জন্য আলাদা ও নিয়ন্ত্রিত রোল-বেসড পারমিশন (RBAC)।",
+        "কঠোর মাল্টি-টেন্যান্ট ডাটাবেজ আইসোলেশন।",
       ],
     },
-    security: {
+    plannedFeatures: {
       en: [
-        "Tenant isolation query wrapper: every SQL execution enforces `tenant_id` validation at the connection pool middleware.",
-        "Synthetic demo data mandate: zero real patient or doctor identifiable records are ever displayed in staging or portfolio previews.",
-        "Helmet HTTP security headers, DOMPurify for HTML sanitization, and tamper-resistant signed cookies.",
-      ],
-      bn: [
-        "কঠোর টেন্যান্ট আইসোলেশন: প্রতিটি ডাটাবেজ কোয়েরিতে বাধ্যতামূলক টেন্যান্ট আইডি ভ্যালিডেশন।",
-        "পোর্টফোলিও ও ডেমোতে কেবলমাত্র কাল্পনিক ও সিন্থেটিক ডেটা ব্যবহারের কঠোর নিয়ম।",
-        "এইচটিএমএল স্যানিটাইজেশন, সিকিউর কুকি এবং ডেটা ভ্যালিডেশন।",
-      ],
-    },
-    roadmap: {
-      en: [
-        "Clinic billing, doctor revenue reconciliation, and automated invoice PDF generation (In Progress).",
-        "Automated WhatsApp and SMS appointment reminders for patients.",
-        "Telemedicine consultation bridge with integrated digital token lobby.",
-        "HL7/FHIR compliant data export for hospital interoperability.",
+        "Clinic billing, accounts reconciliation, and automated invoicing (In Progress).",
+        "Telemedicine consultation room with digital patient lobby token (In Progress).",
+        "Clinic Admin, Super Admin, and Patient self-service portal roles.",
+        "Automated WhatsApp and SMS appointment reminder broadcasts.",
+        "HL7/FHIR compliant health record export.",
       ],
       bn: [
         "ক্লিনিক বিলিং ও আয়-ব্যয়ের হিসাব ব্যবস্থা (চলমান কাজ)।",
+        "টেলিমেডিসিন ভিডিও কনসাল্টেশন ও ভার্চুয়াল টোকেন সিস্টেম (চলমান কাজ)।",
+        "ক্লিনিক অ্যাডমিন ও রোগীদের নিজস্ব পোর্টাল।",
         "রোগীদের জন্য এসএমএস এবং হোয়াটসঅ্যাপ অ্যাপয়েন্টমেন্ট রিমাইন্ডার।",
-        "টেলিমেডিসিন ভিডিও কনসাল্টেশন ও ভার্চুয়াল টোকেন সিস্টেম।",
-        "হাসপাতাল ডাটাবেজের সাথে সংযোগের জন্য আন্তর্জাতিক এফএইচআইআর (FHIR) কমপ্লায়েন্স।",
+        "আন্তর্জাতিক এফএইচআইআর (FHIR) ডেটা এক্সপোর্ট।",
       ],
     },
-    lessons: {
+    builtWith: "Next.js 15, TypeScript, Tailwind CSS, Node.js / Express, MySQL with Tenant Guards, JWT httpOnly cookies, Gemini Flash.",
+    engineeringNotes: {
       en: [
-        "Strangler-fig migration from legacy Express monolith to Next.js server actions requires careful boundary encapsulation of session state.",
-        "Clinicians will abandon software if prescription creation takes more than 45 seconds; UX speed is a clinical requirement.",
+        "Server-side role enforcement: Access boundaries are validated strictly at the API and repository layer, never deferred to UI state.",
+        "Tenant-scoped query guards: Database connection wrappers automatically inject tenant validation parameters to avoid data leaks.",
+        "Concurrency-safe queue allocation: Row-level transaction locks prevent appointment serial collisions under simultaneous bookings.",
       ],
       bn: [
-        "ডাক্তারদের জন্য কোনো সফটওয়্যারে প্রেসক্রিপশন লিখতে ৪৫ সেকেন্ডের বেশি লাগলে তারা কাগুজে খাতায় ফিরে যান; তাই গতিই প্রধান ফিচার।",
-        "ডাটাবেজ আর্কিটেকচারে মাল্টি-টেন্যান্ট লজিক প্রথম দিন থেকেই নিখুঁত রাখা জরুরি।",
+        "সার্ভার-সাইড রোল যাচাই: পারমিশন শুধুমাত্র ইউআই-তে নয়, সার্ভার ও ডাটাবেজ লেভেলে সুরক্ষিত।",
+        "টেন্যান্ট কুয়েরি গার্ড: প্রতিটি ডাটাবেজ কোয়েরিতে বাধ্যতামূলক টেন্যান্ট আইডি ভ্যালিডেশন।",
+        "কনকারেন্সি-সেফ সিরিয়াল: একই সময়ে একাধিক বুকিং হলেও সিরিয়াল ডুপ্লিকেশন রোধে রো-লেভেল লকিং।",
       ],
     },
     links: [
       {
-        label: { en: "Request Demo", bn: "ডেমো অনুরোধ করুন" },
-        url: "https://docclinic.app", // [TODO_CONFIRM_DOCCLINIC_URL]
-        type: "demo",
+        label: { en: "Request Chamber Demo", bn: "ডেমো অনুরোধ করুন" },
+        url: "/contact",
+        isExternal: false,
       },
     ],
-  },
-  {
-    slug: "nationalian",
-    name: {
-      en: "Nationalian",
-      bn: "ন্যাশনালিওন",
-    },
-    tagline: {
-      en: "Educational community platform and student initiative connecting learners across Bangladesh.",
-      bn: "শিক্ষার্থীদের জন্য তৈরি কমিউনিটি প্ল্যাটফর্ম ও শিক্ষামূলক উদ্যোগ।",
-    },
-    status: "archived",
-    role: {
-      en: "Marketing Strategy & Operations Lead [CONFIRM exact title]",
-      bn: "মার্কেটিং স্ট্র্যাটেজি ও অপারেশনস লিড [CONFIRM]",
-    },
-    period: "2022 – 2023",
-    featured: false,
-    problem: {
-      en: "High school and college students in Bangladesh lacked cohesive digital community hubs for peer learning, academic updates, and co-curricular networking.",
-      bn: "বাংলাদেশের কলেজ শিক্ষার্থীদের মধ্যে পারস্পরিক যোগাযোগ এবং সহ-শিক্ষা কার্যক্রমের জন্য একটি সুসংগঠিত প্ল্যাটফর্মের অভাব ছিল।",
-    },
-    audience: {
-      en: "National curriculum students, youth competitors, and academic mentors.",
-      bn: "জাতীয় শিক্ষাক্রমের শিক্ষার্থী এবং শিক্ষার্থীকেন্দ্রিক বিভিন্ন সংগঠন।",
-    },
-    solution: {
-      en: "Led campaign execution, organic social outreach, community engagement events, and digital communication strategies.",
-      bn: "কমিউনিটি গঠন, ডিজিটাল যোগাযোগ কৌশল এবং শিক্ষার্থীদের সংযুক্ত করার বিভিন্ন ইভেন্ট পরিচালনা।",
-    },
-    stack: ["Digital Community", "Content Strategy", "Growth Marketing", "Event Execution"],
-    highlights: {
-      en: [
-        "Spearheaded messaging strategy and digital student outreach across educational institutions.",
-        "Coordinated academic peer-support initiatives and competitive event marketing.",
-      ],
-      bn: [
-        "বিভিন্ন শিক্ষাপ্রতিষ্ঠানের শিক্ষার্থীদের মধ্যে যোগাযোগ ও এনগেজমেন্ট কৌশল পরিচালনা।",
-        "সহশিক্ষা ও প্রতিযোগিতামূলক ইভেন্টের সমন্বয় এবং ডিজিটাল ব্র্যান্ডিং।",
-      ],
-    },
-    security: {
-      en: ["Community guidelines adherence and member data privacy."],
-      bn: ["কমিউনিটির নিরাপত্তা ও সদস্য তথ্যের গোপনীয়তা রক্ষা।"],
-    },
-    roadmap: {
-      en: ["Archived initiative."],
-      bn: ["সম্পন্ন উদ্যোগ।"],
-    },
-    links: [],
-  },
-  {
-    slug: "softstation",
-    name: {
-      en: "Softstation",
-      bn: "সফটস্টেশন",
-    },
-    tagline: {
-      en: "Web engineering and digital presence solutions for educational institutes, schools, and madrasas.",
-      bn: "স্কুল, কলেজ ও মাদ্রাসার জন্য ডিজিটাল পোর্টাল ও ওয়েব ইঞ্জিনিয়ারিং সেবা।",
-    },
-    status: "archived",
-    role: {
-      en: "Business Development & Client Solutions [CONFIRM exact title]",
-      bn: "বিজনেস ডেভেলপমেন্ট ও ক্লায়েন্ট সলিউশনস [CONFIRM]",
-    },
-    period: "2023",
-    featured: false,
-    problem: {
-      en: "Educational institutions in district and rural areas struggled to establish modern, compliant, and cost-effective digital portals required by education boards.",
-      bn: "জেলা ও গ্রামীণ পর্যায়ের শিক্ষাপ্রতিষ্ঠানসমূহের শিক্ষা বোর্ডের নীতিমালা অনুযায়ী ডিজিটাল পোর্টাল তৈরিতে কারিগরি সহযোগিতার প্রয়োজন ছিল।",
-    },
-    audience: {
-      en: "School administrators, college principals, and madrasa governing committees in Bangladesh.",
-      bn: "স্কুল, কলেজ ও মাদ্রাসা পরিচালনা কমিটি এবং শিক্ষাপ্রতিষ্ঠান প্রধানগণ।",
-    },
-    solution: {
-      en: "Consulted directly with institutional leadership, mapped portal functional requirements, and structured delivered web software to match statutory academic board standards.",
-      bn: "শিক্ষাপ্রতিষ্ঠানগুলোর সাথে সরাসরি আলোচনা, রিকয়ারমেন্ট নির্ধারণ এবং উপযুক্ত ওয়েব সমাধান কাঠামো বাস্তবায়ন।",
-    },
-    stack: ["Web Consulting", "Institutional Portals", "Client Solutions", "Technical Sales"],
-    highlights: {
-      en: [
-        "Delivered web solutions for educational institutions adhering to statutory ministry guidelines.",
-        "Managed client discovery, requirement specifications, and delivery sign-offs.",
-      ],
-      bn: [
-        "শিক্ষা বোর্ডের নিয়ম মেনে প্রতিষ্ঠানের ওয়েব পোর্টাল বাস্তবায়নে ভূমিকা।",
-        "গ্রাহকদের প্রয়োজনীয়তা বিশ্লেষণ ও সফলভাবে বাস্তবায়ন নিশ্চিতকরণ।",
-      ],
-    },
-    security: {
-      en: ["Standard web security and institutional data confidentiality."],
-      bn: ["প্রাতিষ্ঠানিক ডেটার নিরাপত্তা ও গোপনীয়তা বজায় রাখা।"],
-    },
-    roadmap: {
-      en: ["Archived institutional project consulting."],
-      bn: ["সম্পন্ন প্রজেক্ট কনসাল্টিং।"],
-    },
-    links: [],
   },
 ];

@@ -13,9 +13,7 @@ export const ThemeToggle: React.FC = () => {
   }, []);
 
   if (!mounted) {
-    return (
-      <div className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted opacity-50" />
-    );
+    return <span className="w-4 h-4 inline-block" />;
   }
 
   const isDark = resolvedTheme === "dark";
@@ -24,7 +22,7 @@ export const ThemeToggle: React.FC = () => {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="w-9 h-9 rounded-full border border-border hover:bg-elevated flex items-center justify-center text-muted hover:text-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      className="text-muted hover:text-text transition-colors p-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >

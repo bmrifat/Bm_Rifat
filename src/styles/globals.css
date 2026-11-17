@@ -8,7 +8,7 @@
   * {
     border-color: var(--border);
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -16,21 +16,35 @@
   body {
     background-color: var(--bg);
     color: var(--text);
+    font-size: 17px;
+    line-height: 1.7;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Bengali specific typography adjustments */
+  /* Bengali typography adjustments */
   [lang="bn"],
   .font-bengali {
-    line-height: 1.7;
-    font-style: normal !important; /* Never mix fake-italic Bengali */
+    line-height: 1.8;
+    font-style: normal !important;
+  }
+
+  /* Headings weight 600 */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.015em;
+  }
+
+  /* Text-first links */
+  a {
+    transition: color 150ms ease;
   }
 
   /* Focus ring accessibility */
   :focus-visible {
-    outline: 2px solid var(--primary);
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
 }

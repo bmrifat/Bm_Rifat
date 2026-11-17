@@ -1,114 +1,43 @@
 {
   "nav": {
-    "home": "Home",
+    "brand": "Rifat",
     "ventures": "Ventures",
-    "about": "About",
     "writing": "Writing",
-    "leadership": "Leadership",
+    "contact": "Contact"
+  },
+  "sections": {
+    "ventures": "Ventures",
+    "interests": "Things I'm interested in",
+    "also": "Also",
     "now": "Now",
-    "press": "Press",
-    "resume": "Resume",
-    "contact": "Contact",
-    "talkCTA": "Let's talk"
+    "elsewhere": "Elsewhere"
   },
-  "home": {
-    "roleChip": "Founder & CEO · ShasthoSathi · DocClinic",
-    "viewVentures": "View ventures",
-    "contactMe": "Contact me",
-    "credibilityBadge": "Verified Track Record",
-    "featuredVentures": "Featured Ventures",
-    "featuredVenturesSubtitle": "Production healthcare technology and clinical platforms engineered for Bangladesh.",
-    "howIBuild": "How I Build",
-    "howIBuildSubtitle": "Four foundational engineering principles rooted in reliability, security, and native context.",
-    "latestWriting": "Engineering & Case Notes",
-    "latestWritingSubtitle": "Architecture decisions, security models, and technical trade-offs.",
-    "leadershipSnippet": "Leadership & Community",
-    "leadershipSnippetSubtitle": "Organising Secretary at DIU CSE Speakers Club and active technical speaker.",
-    "closingCtaTitle": "Building something in healthcare or tech in Bangladesh? Let's talk.",
-    "closingCtaSubtitle": "Open to technical advising, healthcare clinic partnerships, speaking invitations, and senior engineering roles.",
-    "ctaButton": "Get in touch"
-  },
-  "ventures": {
-    "title": "Ventures & Systems",
-    "subtitle": "Healthcare platforms and technical systems built end-to-end: product architecture, security boundaries, and production code.",
-    "backToVentures": "Back to all ventures",
+  "caseStudy": {
+    "back": "← Ventures",
+    "whatItIs": "What it is",
+    "why": "Why",
+    "whatItDoes": "What it does",
     "status": "Status",
-    "role": "Role",
-    "period": "Timeline",
-    "techStack": "Technology Stack",
-    "problem": "The Problem",
-    "targetAudience": "Target Audience",
-    "solution": "Solution & Architecture",
-    "keyHighlights": "Key Engineering Highlights",
-    "securityPrivacy": "Security & Patient Privacy",
-    "roadmap": "Engineering Roadmap",
-    "lessonsLearned": "Lessons & Trade-offs",
-    "demoWarning": "All preview screenshots and demos use strictly synthetic test data. Zero real patient or clinical information is exposed."
-  },
-  "about": {
-    "title": "About BM Rifat",
-    "subtitle": "Software engineer, healthcare technology builder, and entrepreneur based in Dhaka, Bangladesh.",
-    "storyTitle": "Why Healthcare Technology in Bangladesh",
-    "timelineTitle": "Journey & Milestones",
-    "skillsTitle": "Core Competencies & Stack",
-    "valuesTitle": "Guiding Principles"
-  },
-  "leadership": {
-    "title": "Leadership & Public Speaking",
-    "subtitle": "Organising Secretary at DIU CSE Speakers Club, campus initiatives, and technical workshops.",
-    "speakersClubTitle": "DIU CSE Speakers Club",
-    "speakersClubDesc": "Directing public speaking workshops, student debate tournaments, anchor grooming, and large-scale technical symposiums for computer science undergraduates.",
-    "speakingTopicsTitle": "Topics I Speak & Mentor On",
-    "inviteCta": "Invite Me to Speak",
-    "inviteDesc": "Available for university technical keynotes, healthtech founder panels, and engineering workshops."
+    "builtWith": "Built with",
+    "engineeringNotes": "Engineering notes",
+    "links": "Links",
+    "disclaimer": "Medical disclaimer: ShasthoSathi and DocClinic are software tools and are not a substitute for professional clinical medical advice."
   },
   "contact": {
-    "title": "Let's Build Something Together",
-    "subtitle": "Reach out for healthcare platform demos, partnership inquiries, speaking engagements, or engineering roles.",
-    "intentLabel": "What would you like to discuss?",
-    "nameLabel": "Your Name",
-    "emailLabel": "Email Address",
-    "orgLabel": "Organization / Clinic (Optional)",
-    "messageLabel": "Your Message",
-    "submitBtn": "Send Message",
-    "sending": "Transmitting...",
-    "successTitle": "Message Received",
-    "successMessage": "Thank you for reaching out! BM Rifat typically responds within 24–48 hours.",
-    "directEmail": "Direct Email",
-    "responseTime": "Average response time: 24–48 hours. For urgent clinical inquiries, please reach out via verified channels."
+    "title": "Contact",
+    "emailIntro": "The fastest way to reach me is by direct email:",
+    "emailDirect": "hello@TODO_PROVIDE_EMAIL",
+    "formHeading": "Or send a short note below:",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send note",
+    "sending": "Sending...",
+    "sent": "Thank you. Your note has been received.",
+    "error": "Failed to send note. Please email directly."
   },
-  "press": {
-    "title": "Press Kit & Media Assets",
-    "subtitle": "Official biographical summaries, verified venture facts, and media resources for organizers and publications.",
-    "shortBioTitle": "Short Bio (50 words)",
-    "longBioTitle": "Full Bio (150 words)",
-    "factsTitle": "Verified Brand & Technical Facts",
-    "downloadAssets": "Media Downloads"
-  },
-  "now": {
-    "title": "What I'm Focused on Now",
-    "subtitle": "A public log of current technical milestones, active ventures, and reading list.",
-    "lastUpdated": "Last updated"
-  },
-  "resume": {
-    "title": "Curriculum Vitae",
-    "subtitle": "Comprehensive engineering, entrepreneurial, and academic track record.",
-    "downloadPdf": "Download PDF CV"
-  },
-  "writing": {
-    "title": "Writing & Engineering Notes",
-    "subtitle": "Deep-dives into systems architecture, multi-tenant database isolation, and healthcare AI safety.",
-    "backToList": "Back to all articles"
-  },
-  "common": {
-    "live": "Live",
-    "building": "In Development",
-    "planned": "Planned",
-    "archived": "Archived",
-    "viewCaseStudy": "Explore Case Study",
-    "readArticle": "Read Article",
-    "requestDemo": "Request Demo",
-    "allRightsReserved": "All rights reserved",
-    "medicalDisclaimer": "Medical Disclaimer: Platforms described are clinical software tools and AI health assistants. They are not a replacement for direct in-person evaluation by licensed medical practitioners."
+  "footer": {
+    "privacy": "Privacy",
+    "allRights": "All rights reserved."
   }
 }

@@ -1,5 +1,5 @@
 import { profile } from "@/data/profile";
-import { Venture } from "./validators";
+import { MinimalVenture } from "@/data/ventures";
 import { Post } from "./validators";
 
 export function getPersonJsonLd() {
@@ -7,7 +7,7 @@ export function getPersonJsonLd() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
-    jobTitle: profile.title.en,
+    jobTitle: profile.tagline.en,
     worksFor: [
       {
         "@type": "Organization",
@@ -20,17 +20,17 @@ export function getPersonJsonLd() {
     ],
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "Daffodil International University",
+      name: "Dhaka International University (DIU)",
     },
     url: "https://bmrifat.com",
     sameAs: [
-      "https://github.com/bmrifat",
-      "https://linkedin.com/in/TODO_PROVIDE_LINKEDIN",
+      profile.github,
+      profile.linkedin,
     ],
   };
 }
 
-export function getOrganizationJsonLd(venture: Venture) {
+export function getOrganizationJsonLd(venture: MinimalVenture) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
