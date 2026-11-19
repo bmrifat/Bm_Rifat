@@ -29,40 +29,40 @@ export default async function ContactPage({
   const isBn = locale === "bn";
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-2xl sm:text-3xl font-semibold text-text tracking-tight">
+    <div className="space-y-10 sm:space-y-12">
+      <div className="space-y-1.5 pb-6 border-b border-border/80">
+        <h1 className="text-2xl sm:text-[28px] font-semibold text-text tracking-tight">
           {isBn ? "যোগাযোগ" : "Contact"}
         </h1>
-        <p className="text-base text-muted mt-1">
+        <p className="text-[15px] text-muted">
           {isBn
             ? "আমার সাথে যোগাযোগের সবচেয়ে দ্রুত ও সরাসরি মাধ্যম হলো ইমেইল।"
-            : "The most reliable way to reach me is by direct email."}
+            : "The most direct way to reach me is by email."}
         </p>
       </div>
 
       {/* Email first */}
-      <div className="py-2">
-        <span className="text-xs uppercase tracking-wider text-muted font-semibold block mb-1">
+      <div className="space-y-1.5">
+        <span className="text-[11.5px] uppercase tracking-[0.14em] text-muted/80 font-semibold block">
           {isBn ? "সরাসরি ইমেইল" : "Direct email"}
         </span>
         <a
           href={`mailto:${profile.email}`}
-          className="text-base text-accent hover:underline font-mono"
+          className="text-[16px] text-text hover:text-accent font-mono underline underline-offset-4 decoration-border/80 hover:decoration-accent transition-colors"
         >
           {profile.email}
         </a>
       </div>
 
       {/* Tiny form second */}
-      <div className="pt-6 border-t border-border space-y-2">
-        <span className="text-xs uppercase tracking-wider text-muted font-semibold block">
+      <div className="pt-8 border-t border-border/70 space-y-3">
+        <span className="text-[11.5px] uppercase tracking-[0.14em] text-muted/80 font-semibold block">
           {isBn ? "অথবা একটি সংক্ষিপ্ত বার্তা পাঠান" : "Or send a short note"}
         </span>
         <ContactForm />
       </div>
 
-      <div className="pt-4 text-xs text-muted">
+      <div className="pt-4 text-[12.5px] text-muted/80">
         {isBn
           ? "গড় রেসপন্স সময়: সাধারণত ২৪ থেকে ৪৮ ঘণ্টার মধ্যে উত্তর দেওয়া হয়।"
           : "Response turnaround: usually within 24–48 hours."}

@@ -11,13 +11,14 @@
 
   html {
     scroll-behavior: smooth;
+    background-color: var(--bg);
   }
 
   body {
     background-color: var(--bg);
     color: var(--text);
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 16.5px;
+    line-height: 1.75;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -26,26 +27,26 @@
   /* Bengali typography adjustments */
   [lang="bn"],
   .font-bengali {
-    line-height: 1.8;
+    line-height: 1.85;
     font-style: normal !important;
   }
 
-  /* Headings weight 600 */
+  /* Headings weight 600 with optical letter spacing */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: var(--text);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
   }
 
-  /* Text-first links */
+  /* Refined, quiet luxury link transitions */
   a {
-    transition: color 150ms ease;
+    transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease;
   }
 
   /* Focus ring accessibility */
   :focus-visible {
     outline: 2px solid var(--accent);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 }
 

@@ -55,8 +55,8 @@ export const ContactForm: React.FC = () => {
 
   if (status === "success") {
     return (
-      <div className="py-4 text-sm text-live">
-        {t("sent")}
+      <div className="py-4 text-[14px] text-live font-medium">
+        ✓ {t("sent")}
       </div>
     );
   }
@@ -75,8 +75,8 @@ export const ContactForm: React.FC = () => {
         aria-hidden="true"
       />
 
-      <div>
-        <label htmlFor="name" className="block text-xs text-muted mb-1">
+      <div className="space-y-1">
+        <label htmlFor="name" className="block text-[12px] uppercase tracking-wider text-muted font-medium">
           {t("name")}
         </label>
         <input
@@ -85,12 +85,12 @@ export const ContactForm: React.FC = () => {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full px-3 py-1.5 text-sm rounded border border-border bg-transparent text-text focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
+          className="w-full px-3 py-2 text-[14.5px] rounded-md border border-border/80 bg-surface/80 text-text placeholder:text-muted/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors"
         />
       </div>
 
-      <div>
-        <label htmlFor="email" className="block text-xs text-muted mb-1">
+      <div className="space-y-1">
+        <label htmlFor="email" className="block text-[12px] uppercase tracking-wider text-muted font-medium">
           {t("email")}
         </label>
         <input
@@ -99,12 +99,12 @@ export const ContactForm: React.FC = () => {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full px-3 py-1.5 text-sm rounded border border-border bg-transparent text-text focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent"
+          className="w-full px-3 py-2 text-[14.5px] rounded-md border border-border/80 bg-surface/80 text-text placeholder:text-muted/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors"
         />
       </div>
 
-      <div>
-        <label htmlFor="message" className="block text-xs text-muted mb-1">
+      <div className="space-y-1">
+        <label htmlFor="message" className="block text-[12px] uppercase tracking-wider text-muted font-medium">
           {t("message")}
         </label>
         <textarea
@@ -113,12 +113,12 @@ export const ContactForm: React.FC = () => {
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full px-3 py-1.5 text-sm rounded border border-border bg-transparent text-text focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent resize-none"
+          className="w-full px-3 py-2 text-[14.5px] rounded-md border border-border/80 bg-surface/80 text-text placeholder:text-muted/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors resize-none leading-relaxed"
         />
       </div>
 
       {status === "error" && (
-        <div className="text-xs text-building">
+        <div className="text-[13px] text-building">
           {errorMessage}
         </div>
       )}
@@ -127,7 +127,7 @@ export const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={loading}
-          className="px-4 py-1.5 text-xs font-medium rounded border border-border bg-text text-bg hover:opacity-90 transition-opacity disabled:opacity-50"
+          className="px-5 py-2 text-[13px] font-medium rounded-md bg-text text-bg hover:opacity-90 active:scale-[0.99] transition-all disabled:opacity-50 shadow-soft"
         >
           {loading ? t("sending") : t("send")}
         </button>

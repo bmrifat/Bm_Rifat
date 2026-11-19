@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { posts } from "@/data/posts";
+import { ArrowLeft } from "lucide-react";
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -52,29 +53,30 @@ export default async function PostDetailPage({
   const loc = isBn ? "bn" : "en";
 
   return (
-    <article className="space-y-6">
+    <article className="space-y-8 sm:space-y-10">
       <div>
         <Link
           href="/writing"
-          className="text-xs text-muted hover:text-accent"
+          className="inline-flex items-center gap-1.5 text-[13px] text-muted hover:text-text transition-colors group"
         >
-          {isBn ? "← সকল প্রবন্ধে ফিরে যান" : "← Back to Writing"}
+          <ArrowLeft className="w-3.5 h-3.5 text-muted/60 group-hover:-translate-x-0.5 transition-transform" />
+          <span>{isBn ? "সকল প্রবন্ধ" : "Writing"}</span>
         </Link>
       </div>
 
-      <header className="space-y-2 pb-6 border-b border-border">
-        <div className="text-xs text-muted">
+      <header className="space-y-3 pb-6 border-b border-border/80">
+        <div className="text-[12.5px] text-muted font-normal">
           {post.date} · {post.readingTime}
         </div>
-        <h1 className="text-2xl sm:text-3xl font-semibold text-text tracking-tight">
+        <h1 className="text-2xl sm:text-[30px] font-semibold text-text tracking-tight leading-snug">
           {post.title[loc]}
         </h1>
-        <p className="text-base text-muted leading-relaxed">
+        <p className="text-[15.5px] text-muted leading-relaxed">
           {post.summary[loc]}
         </p>
       </header>
 
-      <div className="space-y-4 text-base leading-relaxed text-text whitespace-pre-line">
+      <div className="space-y-5 text-[15.5px] leading-[1.85] text-text whitespace-pre-line font-normal">
         {post.content[loc]}
       </div>
     </article>

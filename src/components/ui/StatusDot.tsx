@@ -9,9 +9,14 @@ interface StatusDotProps {
 
 export const StatusDot: React.FC<StatusDotProps> = ({ status, text, className }) => {
   return (
-    <span className={clsx("inline-flex items-center gap-1.5 text-xs text-muted font-normal", className)}>
+    <span
+      className={clsx(
+        "inline-flex items-center gap-1.5 text-[12px] text-muted tracking-tight shrink-0",
+        className
+      )}
+    >
       <span
-        className={clsx("w-2 h-2 rounded-full shrink-0", {
+        className={clsx("w-1.5 h-1.5 rounded-full shrink-0", {
           "bg-live": status === "live",
           "bg-building": status === "building",
           "bg-accent": status === "planned",
