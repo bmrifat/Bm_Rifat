@@ -11,7 +11,7 @@ import {
   Linkedin,
   MapPin,
   Sparkles,
-} from "lucide-react";
+} from "@/components/ui/Icons";
 
 export default async function HomePage({
   params,

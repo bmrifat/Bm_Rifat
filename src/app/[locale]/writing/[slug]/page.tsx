@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { posts } from "@/data/posts";
-import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { ArrowLeft, Clock, Calendar } from "@/components/ui/Icons";
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];

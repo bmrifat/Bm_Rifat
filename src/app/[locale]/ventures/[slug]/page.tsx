@@ -4,7 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ventures } from "@/data/ventures";
 import { StatusDot } from "@/components/ui/StatusDot";
-import { ArrowLeft, ArrowUpRight, ShieldCheck, Cpu, Code2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ShieldCheck, Cpu, Code2 } from "@/components/ui/Icons";
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];

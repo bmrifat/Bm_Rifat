@@ -2,7 +2,7 @@ import React from "react";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { posts } from "@/data/posts";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "@/components/ui/Icons";
 
 export async function generateMetadata({
   params,

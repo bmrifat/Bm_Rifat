@@ -3,7 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ventures } from "@/data/ventures";
 import { StatusDot } from "@/components/ui/StatusDot";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "@/components/ui/Icons";
 
 export default async function VenturesIndexPage({
   params,

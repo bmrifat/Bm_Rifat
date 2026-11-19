@@ -2,7 +2,7 @@ import React from "react";
 import { setRequestLocale } from "next-intl/server";
 import { profile } from "@/data/profile";
 import { ContactForm } from "@/components/ui/ContactForm";
-import { Mail, Clock, ArrowLeft } from "lucide-react";
+import { Mail, Clock, ArrowLeft } from "@/components/ui/Icons";
 import { Link } from "@/i18n/routing";
 
 export async function generateMetadata({
