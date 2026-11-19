@@ -18,6 +18,8 @@
 *.pem
 rifat-personal-brand-site-spec.md
 rifat-personal-site-spec-v2-minimal.md
+rifat.jpg
+public/rifat.jpg
 
 # debug
 npm-debug.log*

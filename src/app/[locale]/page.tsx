@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { profile } from "@/data/profile";
@@ -30,10 +31,15 @@ export default async function HomePage({
         {/* Avatar & Availability Badge */}
         <div className="flex items-center justify-between">
           <div className="relative group">
-            <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-2xl bg-gradient-to-br from-surface via-surface-subtle to-surface border border-border p-1 shadow-soft flex items-center justify-center transition-transform group-hover:scale-[1.02]">
-              <div className="w-full h-full rounded-xl bg-surface-subtle/80 flex items-center justify-center text-accent/80 font-serif italic text-2xl select-none">
-                R
-              </div>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-surface via-surface-subtle to-surface border border-border p-1 shadow-soft flex items-center justify-center transition-transform group-hover:scale-[1.02] overflow-hidden">
+              <Image
+                src={profile.avatar || "/rifat.jpg"}
+                alt={profile.name}
+                width={96}
+                height={96}
+                priority
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
           </div>
 

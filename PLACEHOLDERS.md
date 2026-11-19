@@ -7,8 +7,8 @@
 ## 1. Identity & Bio
 - [ ] **`[TODO_CONFIRM_DISPLAY_NAME]`**: Confirm exact display name (currently set to `"BM Rifat"`).
   - *Location:* `src/data/profile.ts`
-- [ ] **`[TODO_PROVIDE_PORTRAIT]`**: Upload 96×96 portrait photo.
-  - *Location:* `public/images/portrait.jpg`
+- [x] **`[TODO_PROVIDE_PORTRAIT]`**: Upload 96×96 portrait photo (`public/rifat.jpg`, git-ignored as requested).
+  - *Location:* `public/rifat.jpg` & `src/data/profile.ts`
 - [ ] **`[TODO_PROVIDE_PERSONAL_MOTIVATION]`**: 1 personal-motivation sentence to finalize the bio draft.
   - *Location:* `src/data/profile.ts`
 
