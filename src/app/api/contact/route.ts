@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
 
     // 5. Email dispatch via Resend
     const resendKey = process.env.RESEND_API_KEY;
-    const recipientEmail = process.env.CONTACT_TO_EMAIL || "rifat@bmrifat.com";
+    const recipientEmail = process.env.CONTACT_TO_EMAIL || "bmrifat93@gmail.com";
     const senderEmail = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
     const escapedName = escapeHtml(name);

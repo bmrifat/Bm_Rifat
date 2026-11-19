@@ -10,7 +10,7 @@ export const profile = {
   },
   institution: "Dhaka International University (DIU)",
   communityRole: "Organising Secretary, DIU CSE Speakers Club",
-  email: "hello@TODO_PROVIDE_EMAIL", // [TODO_PROVIDE_EMAIL]
+  email: "bmrifat93@gmail.com",
   github: "https://github.com/bmrifat",
   linkedin: "https://linkedin.com/in/TODO_PROVIDE_LINKEDIN", // [TODO_PROVIDE_LINKEDIN]
 
