@@ -82,7 +82,7 @@ export default async function LocaleLayout({
         locale === "bn" ? "font-bengali" : "font-sans"
       )}
     >
-      <body className="min-h-screen bg-bg text-text antialiased selection:bg-accent/15 selection:text-text relative">
+      <body className="min-h-screen bg-bg text-text antialiased selection:bg-amber-200/60 dark:selection:bg-accent/30 selection:text-text relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -90,10 +90,10 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {/* Ambient subtle light wash */}
+            {/* Ambient subtle cream glow */}
             <div
               aria-hidden="true"
-              className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-gradient-to-b from-amber-500/[0.03] via-sky-500/[0.015] to-transparent pointer-events-none blur-3xl -z-10"
+              className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-72 bg-gradient-to-b from-amber-400/[0.04] via-amber-200/[0.02] to-transparent pointer-events-none blur-3xl -z-10"
             />
 
             {/* Skip link */}
