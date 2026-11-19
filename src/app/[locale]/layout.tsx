@@ -82,7 +82,7 @@ export default async function LocaleLayout({
         locale === "bn" ? "font-bengali" : "font-sans"
       )}
     >
-      <body className="min-h-screen bg-bg text-text antialiased selection:bg-accent/20">
+      <body className="min-h-screen bg-bg text-text antialiased selection:bg-accent/15 selection:text-text relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -90,17 +90,29 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
+            {/* Ambient subtle light wash */}
+            <div
+              aria-hidden="true"
+              className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-gradient-to-b from-amber-500/[0.03] via-sky-500/[0.015] to-transparent pointer-events-none blur-3xl -z-10"
+            />
+
             {/* Skip link */}
             <a
               href="#main-content"
-              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-3 py-1 bg-accent text-white rounded text-xs"
+              className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-3.5 py-1.5 bg-text text-bg rounded-full text-xs font-medium shadow-soft"
             >
               {locale === "bn" ? "সরাসরি মূল অংশে যান" : "Skip to main content"}
             </a>
 
-            {/* Single column, max-width: 680px, centered */}
-            <div className="max-w-reading mx-auto px-6 sm:px-8">
-              <Header />
+            {/* Sticky subtle glassmorphic header container */}
+            <div className="sticky top-0 z-40 backdrop-blur-md bg-bg/85 border-b border-border/60 transition-colors">
+              <div className="max-w-reading mx-auto px-6 sm:px-8">
+                <Header />
+              </div>
+            </div>
+
+            {/* Single column, max-width: 680px, centered content */}
+            <div className="max-w-reading mx-auto px-6 sm:px-8 pt-8 sm:pt-10">
               <main id="main-content">
                 {children}
               </main>

@@ -13,6 +13,7 @@ const config: Config = {
         bg: "var(--bg)",
         surface: "var(--surface)",
         "surface-subtle": "var(--surface-subtle)",
+        "surface-hover": "var(--surface-hover)",
         text: "var(--text)",
         muted: "var(--muted)",
         border: "var(--border)",
@@ -33,6 +34,7 @@ const config: Config = {
       },
       boxShadow: {
         soft: "0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 2px -1px rgba(0, 0, 0, 0.02)",
+        glow: "0 10px 30px -10px rgba(0, 0, 0, 0.05)",
       },
     },
   },
