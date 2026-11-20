@@ -1,7 +1,7 @@
 export const profile = {
   name: "BM Rifat", // [TODO_CONFIRM_DISPLAY_NAME]
   tagline: {
-    en: "Founder & CEO of ShasthoSathi and DocClinic.",
+    en: "Founder & CEO of SasthoSathi and DocClinic.",
     bn: "স্বাস্থ্য সাথী এবং ডকক্লিনিকের প্রতিষ্ঠাতা ও প্রধান নির্বাহী।",
   },
   bio: {
@@ -78,7 +78,7 @@ export const profile = {
     lastUpdated: "November 2024",
     bullets: [
       {
-        en: "Refining ShasthoSathi's multi-model AI fallback cascade with Bengali Edge TTS.",
+        en: "Refining SasthoSathi's multi-model AI fallback cascade with Bengali Edge TTS.",
         bn: "বাংলা ভয়েস সিন্থেসিস সহ স্বাস্থ্য সাথীর মাল্টি-মডেল এআই ফলব্যাক আর্কিটেকচার উন্নয়ন।",
       },
       {

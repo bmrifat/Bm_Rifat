@@ -14,16 +14,16 @@ describe("Minimal v2 Portfolio Data Integrity", () => {
     expect(profile.also.length).toBe(3);
   });
 
-  it("has valid ventures (ShasthoSathi and DocClinic)", () => {
+  it("has valid ventures (SasthoSathi and DocClinic)", () => {
     expect(ventures.length).toBe(2);
     const slugs = ventures.map((v) => v.slug);
-    expect(slugs).toContain("shasthosathi");
+    expect(slugs).toContain("sasthosathi");
     expect(slugs).toContain("docclinic");
 
-    const shasthosathi = ventures.find((v) => v.slug === "shasthosathi");
-    expect(shasthosathi?.status).toBe("live");
-    expect(shasthosathi?.whatItDoes.en.length).toBeGreaterThan(0);
-    expect(shasthosathi?.engineeringNotes.en.length).toBe(3);
+    const sasthosathi = ventures.find((v) => v.slug === "sasthosathi");
+    expect(sasthosathi?.status).toBe("live");
+    expect(sasthosathi?.whatItDoes.en.length).toBeGreaterThan(0);
+    expect(sasthosathi?.engineeringNotes.en.length).toBe(3);
 
     const docclinic = ventures.find((v) => v.slug === "docclinic");
     expect(docclinic?.status).toBe("building");

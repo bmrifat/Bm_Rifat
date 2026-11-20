@@ -11,7 +11,7 @@ export function getPersonJsonLd() {
     worksFor: [
       {
         "@type": "Organization",
-        name: "ShasthoSathi",
+        name: "SasthoSathi",
       },
       {
         "@type": "Organization",

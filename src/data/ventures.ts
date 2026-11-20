@@ -19,10 +19,10 @@ export interface MinimalVenture {
 
 export const ventures: MinimalVenture[] = [
   {
-    slug: "shasthosathi",
+    slug: "sasthosathi",
     name: {
-      en: "ShasthoSathi (স্বাস্থ্য সাথী)",
-      bn: "স্বাস্থ্য সাথী (ShasthoSathi)",
+      en: "SasthoSathi (স্বাস্থ্য সাথী)",
+      bn: "স্বাস্থ্য সাথী (SasthoSathi)",
     },
     tagline: {
       en: "Bengali-language health platform for patients.",
@@ -89,7 +89,7 @@ export const ventures: MinimalVenture[] = [
     links: [
       {
         label: { en: "Visit Website (TODO_CONFIRM_URL)", bn: "ওয়েবসাইট দেখুন (TODO_CONFIRM_URL)" },
-        url: "https://shasthosathi.com", // [TODO_CONFIRM_SHASTHOSATHI_URL]
+        url: "https://sasthosathi.com", // [TODO_CONFIRM_SHASTHOSATHI_URL]
         isExternal: true,
       },
       {

@@ -23,12 +23,12 @@
 
 ---
 
-## 3. Ventures (ShasthoSathi & DocClinic)
-- [ ] **`[TODO_CONFIRM_SHASTHOSATHI_URL]`**: Confirm live website URL (currently `https://shasthosathi.com`).
+## 3. Ventures (SasthoSathi & DocClinic)
+- [ ] **`[TODO_CONFIRM_SHASTHOSATHI_URL]`**: Confirm live website URL (currently `https://sasthosathi.com`).
   - *Location:* `src/data/ventures.ts`
 - [ ] **`[TODO_CONFIRM_FEATURE_STATUS]`**: Verify built vs planned feature status:
-  - **ShasthoSathi Built:** AI lab/prescription/image analysis, Bengali TTS, symptom checker, emergency hub, demo cases gallery.
-  - **ShasthoSathi Planned:** Women's Corner, Better Me, diagnostic test prices & centres, telemedicine bridge, family health records.
+  - **SasthoSathi Built:** AI lab/prescription/image analysis, Bengali TTS, symptom checker, emergency hub, demo cases gallery.
+  - **SasthoSathi Planned:** Women's Corner, Better Me, diagnostic test prices & centres, telemedicine bridge, family health records.
   - **DocClinic Built:** Prescription desk with BD medicine search/PDF, AI prescription/lab OCR, patient queue/history, Doctor/Receptionist RBAC, multi-tenant isolation.
   - **DocClinic In Development:** Billing/subscriptions, telemedicine.
   - **DocClinic Planned:** Clinic Admin/Patient roles, mobile apps, SMS/WhatsApp reminders.

@@ -8,7 +8,7 @@ export const timeline: TimelineItem[] = [
       bn: "প্রতিষ্ঠাতা ও প্রধান নির্বাহী",
     },
     org: {
-      en: "ShasthoSathi (স্বাস্থ্য সাথী)",
+      en: "SasthoSathi (স্বাস্থ্য সাথী)",
       bn: "স্বাস্থ্য সাথী",
     },
     description: {
@@ -93,8 +93,8 @@ export const timeline: TimelineItem[] = [
       bn: "কম্পিউটার সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং (বি.এসসি)",
     },
     org: {
-      en: "Daffodil International University",
-      bn: "ড্যাফোডিল ইন্টারন্যাশনাল ইউনিভার্সিটি",
+      en: "Dhaka International University (DIU)",
+      bn: "ঢাকা ইন্টারন্যাশনাল ইউনিভার্সিটি (DIU)",
     },
     description: {
       en: "Undergraduate studies focused on software engineering principles, distributed systems, algorithms, and secure software development.",

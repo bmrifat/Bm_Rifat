@@ -21,6 +21,20 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:locale/ventures/shasthosathi",
+        destination: "/:locale/ventures/sasthosathi",
+        permanent: true,
+      },
+      {
+        source: "/ventures/shasthosathi",
+        destination: "/ventures/sasthosathi",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

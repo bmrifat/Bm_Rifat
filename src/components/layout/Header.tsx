@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
       {/* Right Nav */}
       <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-muted">
         <Link
-          href="/ventures/shasthosathi"
+          href="/ventures/sasthosathi"
           className={
             isVentures
               ? "text-text font-medium border-b border-text/80 pb-0.5"

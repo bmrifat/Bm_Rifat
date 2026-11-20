@@ -43,7 +43,7 @@ export async function generateMetadata({
     },
     description: isBn
       ? "বাংলাদেশের জন্য স্বাস্থ্যপ্রযুক্তি তৈরি করছি। স্বাস্থ্য সাথী ও ডকক্লিনিকের প্রতিষ্ঠাতা ও সিইও।"
-      : "Building healthcare software for Bangladesh. Founder & CEO of ShasthoSathi and DocClinic.",
+      : "Building healthcare software for Bangladesh. Founder & CEO of SasthoSathi and DocClinic.",
     metadataBase: new URL("https://bmrifat.com"),
     alternates: {
       canonical: `/${locale}`,

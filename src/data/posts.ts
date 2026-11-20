@@ -16,7 +16,7 @@ export const posts: Post[] = [
     },
     content: {
       en: `
-When building **ShasthoSathi**, our primary constraint was clinical reliability. If a patient in a rural district with intermittent 3G coverage submits a laboratory report for interpretation, the system cannot hang on a 15-second cold start from a large multimodal model, nor can it fail silently if an upstream API quota triggers rate limiting.
+When building **SasthoSathi**, our primary constraint was clinical reliability. If a patient in a rural district with intermittent 3G coverage submits a laboratory report for interpretation, the system cannot hang on a 15-second cold start from a large multimodal model, nor can it fail silently if an upstream API quota triggers rate limiting.
 
 ### 1. The Single Model Fallacy
 Most AI prototypes wrap a single endpoint (\`gemini-1.5-pro\` or \`gpt-4o\`). In production healthcare applications, this creates three unacceptable vulnerabilities:
@@ -40,7 +40,7 @@ Client Report Upload
 Each upstream model provider is wrapped with an in-memory sliding-window circuit breaker. If 3 consecutive requests to Tier 1 exceed the latency threshold of 4,000ms or return status \`503\`, the circuit trips into \`OPEN\` state for 60 seconds. During this window, all inbound requests bypass Tier 1 entirely, preventing cascading queue pileups.
 
 ### 4. Hard Medical Guardrails (Post-Processing)
-Never rely on prompt instructions like *"do not prescribe drugs"* alone. In ShasthoSathi, an independent deterministic rule engine parses all generated JSON payloads. If medication names or dosage patterns are detected in patient-facing self-care contexts, the payload is intercepted and replaced with a mandatory physical consultation directive.
+Never rely on prompt instructions like *"do not prescribe drugs"* alone. In SasthoSathi, an independent deterministic rule engine parses all generated JSON payloads. If medication names or dosage patterns are detected in patient-facing self-care contexts, the payload is intercepted and replaced with a mandatory physical consultation directive.
       `.trim(),
       bn: `
 **স্বাস্থ্য সাথী** তৈরির ক্ষেত্রে আমাদের প্রধান চ্যালেঞ্জ ছিল নির্ভরযোগ্যতা। প্রত্যন্ত অঞ্চলের একজন রোগী যখন ল্যাব টেস্টের ছবি আপলোড করেন, তখন ১৫ সেকেন্ড লোডিং স্ক্রিন দেখে বসে থাকা বা এআই সার্ভার ডাউন থাকার কারণে সেবা বন্ধ হওয়া কোনোভাবেই গ্রহণযোগ্য নয়।
@@ -133,7 +133,7 @@ Localization in tech often stops at importing an i18n JSON file and swapping Eng
 Complex conjunct characters (যুক্তবর্ণ) in the Bengali script occupy significantly more vertical ascender and descender space than Latin glyphs. Standard CSS line-heights of \`1.4\` or \`1.5\` cause characters to overlap or clip awkwardly. We enforced a baseline line-height of \`1.7\` for all \`[lang="bn"]\` elements.
 
 ### 2. Audio-First for Low-Literacy Patients
-A significant percentage of patients seeking help in district hospitals cannot fluently read dense text on mobile screens. Through **Edge TTS** integration with natural Bengali voice synthesizers, ShasthoSathi enables users to hit one play button and listen to their summarized diagnostic report in clear Bengali speech.
+A significant percentage of patients seeking help in district hospitals cannot fluently read dense text on mobile screens. Through **Edge TTS** integration with natural Bengali voice synthesizers, SasthoSathi enables users to hit one play button and listen to their summarized diagnostic report in clear Bengali speech.
       `.trim(),
       bn: `
 ওয়েবসাইটে শুধু ভাষা পরিবর্তন করলেই বাংলা ব্যবহারকারীদের জন্য একটি সিস্টেম উপযুক্ত হয়ে ওঠে না। বিশেষ করে স্বাস্থ্যসেবার ক্ষেত্রে এর জন্য প্রয়োজন গভীর পর্যবেক্ষণ ও ব্যবহারিক সমাধান।
