@@ -12,6 +12,7 @@ import {
   Linkedin,
   MapPin,
   Sparkles,
+  Phone,
 } from "@/components/ui/Icons";
 
 export default async function HomePage({
@@ -258,6 +259,16 @@ export default async function HomePage({
           >
             <Mail className="w-3.5 h-3.5 text-muted/70" />
             <span>Email</span>
+          </a>
+
+          <a
+            href={profile.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border/80 text-xs font-medium text-text hover:text-live hover:border-live shadow-soft transition-all"
+          >
+            <Phone className="w-3.5 h-3.5 text-live" />
+            <span>WhatsApp</span>
           </a>
         </div>
       </section>

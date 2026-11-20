@@ -12,6 +12,9 @@ export const profile = {
   communityRole: "Organising Secretary, DIU CSE Speakers Club",
   avatar: "/rifat.jpg",
   email: "bmrifat93@gmail.com",
+  phone: "+88015400441246",
+  displayPhone: "015400441246",
+  whatsapp: "https://wa.me/88015400441246",
   github: "https://github.com/bmrifat",
   linkedin: "https://linkedin.com/in/TODO_PROVIDE_LINKEDIN", // [TODO_PROVIDE_LINKEDIN]
 

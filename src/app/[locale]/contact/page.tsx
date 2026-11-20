@@ -2,7 +2,7 @@ import React from "react";
 import { setRequestLocale } from "next-intl/server";
 import { profile } from "@/data/profile";
 import { ContactForm } from "@/components/ui/ContactForm";
-import { Mail, Clock, ArrowLeft } from "@/components/ui/Icons";
+import { Mail, Clock, ArrowLeft, Phone } from "@/components/ui/Icons";
 import { Link } from "@/i18n/routing";
 
 export async function generateMetadata({
@@ -53,21 +53,49 @@ export default async function ContactPage({
         </p>
       </div>
 
-      {/* Direct email card */}
-      <div className="p-4 sm:p-5 rounded-xl bg-surface border border-border/80 shadow-soft space-y-2">
-        <div className="flex items-center gap-2">
-          <Mail className="w-4 h-4 text-accent" />
-          <span className="text-[11.5px] uppercase tracking-[0.14em] text-muted font-semibold">
-            {isBn ? "সরাসরি ইমেইল" : "Direct Email"}
-          </span>
+      {/* Direct contact cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        <div className="p-4 sm:p-5 rounded-xl bg-surface border border-border/80 shadow-soft space-y-2">
+          <div className="flex items-center gap-2">
+            <Mail className="w-4 h-4 text-accent" />
+            <span className="text-[11.5px] uppercase tracking-[0.14em] text-muted font-semibold">
+              {isBn ? "সরাসরি ইমেইল" : "Direct Email"}
+            </span>
+          </div>
+          <div>
+            <a
+              href={`mailto:${profile.email}`}
+              className="text-[15px] sm:text-[16px] text-text hover:text-accent font-mono underline underline-offset-4 decoration-border/80 hover:decoration-accent transition-colors break-all"
+            >
+              {profile.email}
+            </a>
+          </div>
         </div>
-        <div>
-          <a
-            href={`mailto:${profile.email}`}
-            className="text-[16px] text-text hover:text-accent font-mono underline underline-offset-4 decoration-border/80 hover:decoration-accent transition-colors"
-          >
-            {profile.email}
-          </a>
+
+        <div className="p-4 sm:p-5 rounded-xl bg-surface border border-border/80 shadow-soft space-y-2">
+          <div className="flex items-center gap-2">
+            <Phone className="w-4 h-4 text-live" />
+            <span className="text-[11.5px] uppercase tracking-[0.14em] text-muted font-semibold">
+              {isBn ? "ফোন / হোয়াটসঅ্যাপ" : "Phone / WhatsApp"}
+            </span>
+          </div>
+          <div className="flex items-center gap-2.5 flex-wrap">
+            <a
+              href={`tel:${profile.phone}`}
+              className="text-[15px] sm:text-[16px] text-text hover:text-accent font-mono underline underline-offset-4 decoration-border/80 hover:decoration-accent transition-colors"
+            >
+              {profile.displayPhone}
+            </a>
+            <span className="text-border text-xs">·</span>
+            <a
+              href={profile.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] font-medium text-live hover:underline"
+            >
+              WhatsApp →
+            </a>
+          </div>
         </div>
       </div>
 
