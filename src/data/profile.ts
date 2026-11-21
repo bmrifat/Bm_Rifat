@@ -18,6 +18,47 @@ export const profile = {
   github: "https://github.com/bmrifat",
   linkedin: "https://linkedin.com/in/TODO_PROVIDE_LINKEDIN", // [TODO_PROVIDE_LINKEDIN]
 
+  thesis: {
+    en: "Technological abundance begins when life-critical national infrastructure — clinical intelligence, diagnostic interpretation, and emergency coordination — becomes software-native, deterministic, and universally accessible in one's mother tongue.",
+    bn: "একটি জাতির টেকসই সমৃদ্ধি তখনই শুরু হয়, যখন তার জীবন-সংশ্লিষ্ট মৌলিক সেবাগুলো — ক্লিনিক্যাল ইন্টেলিজেন্স, ডায়াগনস্টিক রিপোর্ট বিশ্লেষণ ও জরুরি স্বাস্থ্য নেটওয়ার্ক — সফটওয়্যার-নেটিভ, শতভাগ নির্ভুল এবং সাধারণ মানুষের মাতৃভাষায় সহজে সবার কাছে পৌঁছে যায়।",
+  },
+
+  operatingPrinciples: [
+    {
+      num: "I",
+      title: {
+        en: "Mission-Critical Determinism",
+        bn: "কঠোর নির্ভুলতা ও জীবন-সুরক্ষা",
+      },
+      desc: {
+        en: "In health software, 99.9% is not an engineering metric; it is a patient's life. Probabilistic AI models must be bounded by deterministic code guardrails before any clinical output reaches a citizen.",
+        bn: "স্বাস্থ্য প্রযুক্তিতে ৯৯.৯% কেবল কোনো আপটাইম মেট্রিক নয়, এটি একজন রোগীর জীবন। এআই-এর যেকোনো আউটপুট রোগীর স্ক্রিনে পৌঁছানোর আগেই সুনির্দিষ্ট কোড-লেভেল ফিল্টার দিয়ে ভ্যালিডেট হতে হবে।",
+      },
+    },
+    {
+      num: "II",
+      title: {
+        en: "Language as Sovereignty",
+        bn: "ভাষাগত সার্বভৌমত্ব ও সমঅধিকার",
+      },
+      desc: {
+        en: "Democratizing healthcare means speaking the exact language of 170 million people. True intelligence begins with fluent Bengali medical synthesis, visual OCR, and voice accessibility.",
+        bn: "১৭ কোটি মানুষের স্বাস্থ্যসেবায় প্রযুক্তি প্রয়োগ করতে হলে তাদের মুখের ভাষায় কথা বলতে হবে। বাংলায় মেডিকেল টার্মিনোলজি ও অডিও সিন্থেসিস সাধারণ মানুষের সবচেয়ে বড় সুরক্ষা।",
+      },
+    },
+    {
+      num: "III",
+      title: {
+        en: "Compounding Infrastructure",
+        bn: "দীর্ঘমেয়াদী টেকসই আর্কিটেকচার",
+      },
+      desc: {
+        en: "Real leverage comes from building sovereign platforms that compound with scale — prioritizing multi-tenant data safety and concurrency locks over transient hype.",
+        bn: "আসল প্রভাব আসে এমন সিস্টেম তৈরি থেকে যা প্রতিটি নতুন দিনে আরও দ্রুত, সাশ্রয়ী ও স্থিতিস্থাপক হয় — সাময়িক সুবিধার চেয়ে কঠোর টেন্যান্ট আইসোলেশন ও ডেটা সিকিউরিটির অগ্রাধিকার।",
+      },
+    },
+  ],
+
   interests: [
     {
       lead: { en: "Healthcare access in Bangladesh.", bn: "বাংলাদেশের স্বাস্থ্যসেবায় অন্তর্ভুক্তি।" },

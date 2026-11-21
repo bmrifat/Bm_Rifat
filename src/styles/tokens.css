@@ -10,12 +10,14 @@
   --border-subtle: #eae4d8;
   --accent: #09618c;
   --accent-hover: #074f72;
+  --gold: #8f6b2f;
+  --gold-subtle: rgba(143, 107, 47, 0.08);
   --live: #15803d;
   --building: #b45309;
 }
 
 .dark {
-  /* Warm espresso obsidian with cream accents */
+  /* Warm espresso obsidian with cream & heirloom gold accents */
   --bg: #151412;
   --surface: #1e1d1a;
   --surface-subtle: #272522;
@@ -26,6 +28,8 @@
   --border-subtle: #24221f;
   --accent: #38bdf8;
   --accent-hover: #7dd3fc;
+  --gold: #dfb15b;
+  --gold-subtle: rgba(223, 177, 91, 0.12);
   --live: #34d399;
   --building: #fbbf24;
 }

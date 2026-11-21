@@ -22,6 +22,10 @@ const config: Config = {
           DEFAULT: "var(--accent)",
           hover: "var(--accent-hover)",
         },
+        gold: {
+          DEFAULT: "var(--gold)",
+          subtle: "var(--gold-subtle)",
+        },
         live: "var(--live)",
         building: "var(--building)",
       },
