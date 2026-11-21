@@ -17,8 +17,8 @@
 ## 2. Links & Socials
 - [x] **`[TODO_PROVIDE_EMAIL]`**: Public contact email address (`bmrifat93@gmail.com`).
   - *Location:* `src/data/profile.ts`, `src/data/socials.ts`, `src/messages/*.json`
-- [ ] **`[TODO_PROVIDE_LINKEDIN]`**: Personal LinkedIn profile URL.
-  - *Location:* `src/data/profile.ts`
+- [x] **`[TODO_PROVIDE_LINKEDIN]`**: Personal LinkedIn profile URL (`https://www.linkedin.com/in/bm-rifat-b42866336/`).
+  - *Location:* `src/data/profile.ts` & `src/data/socials.ts`
 - [ ] **`[TODO_CONFIRM_DOMAIN]`**: Production custom domain name (currently defaults to `bmrifat.com`).
 
 ---
