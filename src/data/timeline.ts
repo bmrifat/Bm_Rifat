@@ -36,18 +36,18 @@ export const timeline: TimelineItem[] = [
     type: "venture",
   },
   {
-    period: "2024 – Present",
+    period: "2023 – 2024",
     title: {
-      en: "Organising Secretary",
-      bn: "সাংগঠনিক সম্পাদক",
+      en: "Former Organising Secretary (Ex-Secretary)",
+      bn: "সাবেক সাংগঠনিক সম্পাদক",
     },
     org: {
       en: "DIU CSE Speakers Club",
       bn: "ডিআইইউ সিএসই স্পিকার্স ক্লাব",
     },
     description: {
-      en: "Directing public speaking workshops, technical communication sessions, and flagship university speaker symposiums.",
-      bn: "শিক্ষার্থীদের পাবলিক স্পিকিং ওয়ার্কশপ, বিতর্ক প্রতিযোগিতা এবং ফ্ল্যাগশিপ স্পিকার সম্মেলন পরিচালনা।",
+      en: "Directed public speaking workshops, technical communication sessions, and flagship university speaker symposiums.",
+      bn: "শিক্ষার্থীদের পাবলিক স্পিকিং ওয়ার্কশপ, বিতর্ক প্রতিযোগিতা এবং ফ্ল্যাগশিপ স্পিকার সম্মেলন পরিচালনা করেছেন।",
     },
     skills: ["Public Speaking", "Event Management", "Leadership", "Mentorship"],
     type: "leadership",

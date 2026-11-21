@@ -5,11 +5,11 @@ export const profile = {
     bn: "স্বাস্থ্য সাথী এবং ডকক্লিনিকের প্রতিষ্ঠাতা ও প্রধান নির্বাহী।",
   },
   bio: {
-    en: "I build Bengali-first healthcare software for Bangladesh. I'm also a CSE student at Dhaka International University and lead communication and events at the DIU CSE Speakers Club.",
-    bn: "বাংলাদেশের জন্য বাংলা-ভিত্তিক স্বাস্থ্য সফটওয়্যার তৈরি করছি। পাশাপাশি ঢাকা ইন্টারন্যাশনাল ইউনিভার্সিটিতে (DIU) সিএসই অধ্যয়ন করছি এবং ডিআইইউ সিএসই স্পিকার্স ক্লাবের যোগাযোগ ও ইভেন্টের দায়িত্ব পালন করছি।",
+    en: "I build Bengali-first healthcare software for Bangladesh. I'm also a CSE student at Dhaka International University and former Organising Secretary (Ex-Secretary) at the DIU CSE Speakers Club.",
+    bn: "বাংলাদেশের জন্য বাংলা-ভিত্তিক স্বাস্থ্য সফটওয়্যার তৈরি করছি। পাশাপাশি ঢাকা ইন্টারন্যাশনাল ইউনিভার্সিটিতে (DIU) সিএসই অধ্যয়ন করছি এবং ডিআইইউ সিএসই স্পিকার্স ক্লাবের সাবেক সাংগঠনিক সম্পাদক (Ex-Secretary) হিসেবে নেতৃত্ব দিয়েছি।",
   },
   institution: "Dhaka International University (DIU)",
-  communityRole: "Organising Secretary, DIU CSE Speakers Club",
+  communityRole: "Ex-Organising Secretary, DIU CSE Speakers Club",
   avatar: "/rifat.jpg",
   email: "bmrifat93@gmail.com",
   phone: "+8801540041246",
@@ -108,12 +108,12 @@ export const profile = {
     {
       name: "DIU CSE Speakers Club",
       desc: {
-        en: "Organising Secretary.",
-        bn: "সাংগঠনিক সম্পাদক।",
+        en: "Ex-Organising Secretary.",
+        bn: "সাবেক সাংগঠনিক সম্পাদক।",
       },
       role: {
-        en: "Communication & Events Lead",
-        bn: "যোগাযোগ ও ইভেন্ট পরিচালনা",
+        en: "Former Communication & Events Lead",
+        bn: "সাবেক যোগাযোগ ও ইভেন্ট পরিচালনা",
       },
     },
   ],

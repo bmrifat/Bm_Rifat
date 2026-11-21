@@ -10,7 +10,7 @@
 - **Design:** Single column, narrow reading width (`680px`), one accent colour, hairline dividers. No cards, no hero banners, no gradients, no animations.
 - **Content:** The whole story on one page (Home) — bio, ventures, interests, other activities, currently (Now), and elsewhere.
 - **Case Studies:** Short, scannable case studies for **SasthoSathi** and **DocClinic** with problem, built capabilities, engineering decisions/trade-offs, and synthetic data safeguards.
-- **Owner Identity:** CSE student at **Dhaka International University (DIU)**, Organising Secretary at DIU CSE Speakers Club, Founder & CEO at SasthoSathi and DocClinic.
+- **Owner Identity:** CSE student at **Dhaka International University (DIU)**, Ex-Organising Secretary at DIU CSE Speakers Club, Founder & CEO at SasthoSathi and DocClinic.
 - **Multilingual:** Full bilingual mirror in English (`/en/...`) and Bengali (`/bn/...`) using `next-intl`.
 - **Contact:** Email first, tiny spam-safe form second (`POST /api/contact` with rate limiting, Turnstile, and Resend).
 
