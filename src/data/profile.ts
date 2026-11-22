@@ -82,6 +82,145 @@ export const profile = {
     },
   ],
 
+  passions: [
+    {
+      id: "poetry",
+      icon: "Mic",
+      group: "arts",
+      title: {
+        en: "Poetry Recitation",
+        bn: "কবিতা আবৃত্তি",
+      },
+      category: {
+        en: "Art & Voice",
+        bn: "শিল্প ও মনন",
+      },
+      desc: {
+        en: "Expressive vocal cadence, timeless Bengali verses, and lyrical emotion.",
+        bn: "ছন্দ, মনন ও অভিব্যক্তির জীবন্ত প্রকাশ; চিরায়ত বাংলা কবিতার সুর ও গভীর ভাবাবেগ।",
+      },
+    },
+    {
+      id: "reading",
+      icon: "BookOpen",
+      group: "arts",
+      title: {
+        en: "Book Reading",
+        bn: "গ্রন্থ পাঠ",
+      },
+      category: {
+        en: "Intellect",
+        bn: "জ্ঞানানুধ্যান",
+      },
+      desc: {
+        en: "Deep dives into philosophy, system architecture, biographies, and world literature.",
+        bn: "দর্শন, চিন্তাশীল প্রবন্ধ, সফল উদ্যোক্তাদের জীবনী ও ধ্রুপদী সাহিত্যের পাঠাভ্যাস।",
+      },
+    },
+    {
+      id: "traveling",
+      icon: "Compass",
+      group: "outdoors",
+      title: {
+        en: "Traveling",
+        bn: "ট্রাভেলিং",
+      },
+      category: {
+        en: "Exploration",
+        bn: "অভিযাত্রা",
+      },
+      desc: {
+        en: "Venturing into varied landscapes, diverse cultures, and unchartered trails.",
+        bn: "নতুন জনপদ, সংস্কৃতি, ভৌগোলিক বৈচিত্র্য ও অচেনা দিগন্তের সন্ধানে ঘুরে বেড়ানো।",
+      },
+    },
+    {
+      id: "photography",
+      icon: "Camera",
+      group: "arts",
+      title: {
+        en: "Photography",
+        bn: "ফটোগ্রাফি",
+      },
+      category: {
+        en: "Visuals",
+        bn: "দৃশ্যশিল্প",
+      },
+      desc: {
+        en: "Capturing fleeting human moments, interplay of light, and visual stories.",
+        bn: "আলো-ছায়ার ব্যঞ্জনা, মানুষের অভিব্যক্তি ও মুহূর্তের জীবন্ত গল্প ফ্রেমে ধারণ করা।",
+      },
+    },
+    {
+      id: "biking",
+      icon: "Bike",
+      group: "outdoors",
+      title: {
+        en: "Biking",
+        bn: "বাইকিং",
+      },
+      category: {
+        en: "Motion",
+        bn: "গতি ও রোমাঞ্চ",
+      },
+      desc: {
+        en: "The pure freedom of open highways, focus, and long endurance rides.",
+        bn: "উন্মুক্ত মহাসড়কে দুই চাকার গতি, স্বাধীনতা এবং দীর্ঘ রাইডের রোমাঞ্চ।",
+      },
+    },
+    {
+      id: "gardening",
+      icon: "Sprout",
+      group: "outdoors",
+      title: {
+        en: "Gardening",
+        bn: "গার্ডেনিং",
+      },
+      category: {
+        en: "Nature",
+        bn: "প্রকৃতি সাধনা",
+      },
+      desc: {
+        en: "Nurturing green life, soil grounding, and cultivating quiet patience.",
+        bn: "সবুজের যত্ন নেওয়া, মাটির সান্নিধ্যে মানসিক প্রশান্তি ও সতেজতার বিকাশ।",
+      },
+    },
+    {
+      id: "family",
+      icon: "Heart",
+      group: "kinship",
+      title: {
+        en: "Family Time",
+        bn: "ফ্যামিলি টাইম স্পেন্ট",
+      },
+      category: {
+        en: "Kinship",
+        bn: "পারিবারিক বন্ধন",
+      },
+      desc: {
+        en: "Unconditional warmth, rooted values, and cherished presence with loved ones.",
+        bn: "আপনজনদের সাথে নির্ভেজাল সময়, পারিবারিক মূল্যবোধ এবং হৃদয়ের গভীর বন্ধন।",
+      },
+    },
+    {
+      id: "friends",
+      icon: "Users",
+      group: "kinship",
+      title: {
+        en: "Friends Gathering",
+        bn: "ফ্রেন্ডস গ্যাদারিং",
+      },
+      category: {
+        en: "Fellowship",
+        bn: "বন্ধু সমাবেশ",
+      },
+      desc: {
+        en: "Soulful conversations, visionary brainstorming, and genuine companionship.",
+        bn: "অকৃত্রিম আড্ডা, প্রাণখোলা হাসি এবং সমমনা বন্ধুদের সাথে ভাবনার আদান-প্রদান।",
+      },
+    },
+  ],
+
   also: [
     {
       name: "Nationalian",

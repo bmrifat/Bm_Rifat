@@ -12,6 +12,16 @@ describe("Minimal v2 Portfolio Data Integrity", () => {
     expect(profile.communityRole).toContain("DIU CSE Speakers Club");
     expect(profile.interests.length).toBeGreaterThanOrEqual(4);
     expect(profile.also.length).toBe(3);
+    expect(profile.passions.length).toBe(8);
+    const passionIds = profile.passions.map((p) => p.id);
+    expect(passionIds).toContain("poetry");
+    expect(passionIds).toContain("reading");
+    expect(passionIds).toContain("traveling");
+    expect(passionIds).toContain("family");
+    expect(passionIds).toContain("friends");
+    expect(passionIds).toContain("gardening");
+    expect(passionIds).toContain("biking");
+    expect(passionIds).toContain("photography");
   });
 
   it("has valid ventures (SasthoSathi and DocClinic)", () => {
