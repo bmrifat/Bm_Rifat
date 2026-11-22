@@ -2,6 +2,8 @@ import { describe, it, expect } from "vitest";
 import { ventures } from "@/data/ventures";
 import { profile } from "@/data/profile";
 import { posts } from "@/data/posts";
+import { timeline } from "@/data/timeline";
+import { books } from "@/data/books";
 import { ContactSubmissionSchema } from "@/lib/validators";
 import { rateLimit } from "@/lib/rate-limit";
 
@@ -43,6 +45,20 @@ describe("Minimal v2 Portfolio Data Integrity", () => {
 
   it("has valid posts", () => {
     expect(posts.length).toBeGreaterThan(0);
+  });
+
+  it("has valid timeline milestones and curated books", () => {
+    expect(timeline.length).toBeGreaterThanOrEqual(5);
+    const orgs = timeline.map((t) => t.org.en);
+    expect(orgs.some((o) => o.includes("SasthoSathi"))).toBe(true);
+    expect(orgs.some((o) => o.includes("DocClinic"))).toBe(true);
+
+    expect(books.length).toBe(4);
+    const bookIds = books.map((b) => b.id);
+    expect(bookIds).toContain("zero-to-one");
+    expect(bookIds).toContain("high-output-management");
+    expect(bookIds).toContain("thinking-in-systems");
+    expect(bookIds).toContain("gitanjali");
   });
 });
 

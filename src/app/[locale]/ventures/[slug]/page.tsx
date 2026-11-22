@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { ventures } from "@/data/ventures";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { ArrowLeft, ArrowUpRight, ShieldCheck, Cpu, Code2 } from "@/components/ui/Icons";
+import { VentureArchitecturePreview } from "@/components/ui/VentureArchitecturePreview";
 
 export function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -98,20 +99,8 @@ export default async function VentureCaseStudyPage({
           </span>
         </div>
 
-        {/* Screenshot / Interface Canvas */}
-        <div className="p-8 sm:p-14 text-center space-y-2 bg-gradient-to-b from-surface via-surface-subtle/30 to-surface">
-          <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mx-auto">
-            <Cpu className="w-6 h-6" />
-          </div>
-          <div className="text-[14px] font-medium text-text pt-2">
-            {venture.name.en} — System Architecture & Interface
-          </div>
-          <p className="text-[12px] text-muted/80 max-w-sm mx-auto leading-relaxed">
-            {isBn
-              ? "গোপনীয়তা রক্ষা: সম্পূর্ণ কাল্পনিক ও টেস্ট ডেটা দ্বারা গঠিত।"
-              : "Interface preview using synthetic test data. Zero real clinical records exposed."}
-          </p>
-        </div>
+        {/* Live Interactive Architecture Visualizer */}
+        <VentureArchitecturePreview slug={venture.slug} isBn={isBn} />
       </div>
 
       {/* 01 / WHAT IT IS */}

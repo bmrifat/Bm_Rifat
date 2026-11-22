@@ -3,9 +3,12 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { profile } from "@/data/profile";
 import { ventures } from "@/data/ventures";
+import { timeline } from "@/data/timeline";
+import { books } from "@/data/books";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { PortraitLightbox } from "@/components/ui/PortraitLightbox";
 import { PassionsSection } from "@/components/ui/PassionsSection";
+import { TimelineSection } from "@/components/ui/TimelineSection";
 import {
   ArrowUpRight,
   Mail,
@@ -214,10 +217,30 @@ export default async function HomePage({
         </section>
       )}
 
+      {/* 3. CAREER MILESTONES & JOURNEY */}
+      {timeline && timeline.length > 0 && (
+        <section className="space-y-4 pt-10 border-t border-border/70">
+          <div className="flex items-center justify-between pb-1">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-[11px] text-muted/60">03</span>
+              <span className="text-border">/</span>
+              <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
+                {isBn ? "ক্যারিয়ার জার্নি ও মাইলফলক" : "Journey & Career Milestones"}
+              </h2>
+            </div>
+            <span className="text-[11.5px] text-muted/60 font-mono">
+              {timeline.length} {isBn ? "টি অধ্যায়" : "Key Milestones"}
+            </span>
+          </div>
+
+          <TimelineSection items={timeline} isBn={isBn} />
+        </section>
+      )}
+
       {/* 4. CONVICTIONS & INTERESTS */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">03</span>
+          <span className="font-mono text-[11px] text-muted/60">04</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "দূরদর্শিতা ও আগ্রহের বিষয়" : "Convictions & Focus Areas"}
@@ -242,7 +265,7 @@ export default async function HomePage({
         <section className="space-y-4 pt-10 border-t border-border/70">
           <div className="flex items-center justify-between pb-1">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-[11px] text-muted/60">04</span>
+              <span className="font-mono text-[11px] text-muted/60">05</span>
               <span className="text-border">/</span>
               <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
                 {isBn ? "প্যাশন ও ব্যক্তিগত অনুরাগ" : "Passions & Personal Pursuits"}
@@ -255,6 +278,7 @@ export default async function HomePage({
 
           <PassionsSection
             passions={profile.passions}
+            books={books}
             locale={locale}
             isBn={isBn}
           />
@@ -264,7 +288,7 @@ export default async function HomePage({
       {/* 6. ALSO (INSTITUTIONAL ROLES & VENTURES) */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">05</span>
+          <span className="font-mono text-[11px] text-muted/60">06</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "প্রাতিষ্ঠানিক দায়িত্ব ও ভূমিকা" : "Institutional Roles"}
@@ -293,7 +317,7 @@ export default async function HomePage({
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center justify-between pb-1">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[11px] text-muted/60">06</span>
+            <span className="font-mono text-[11px] text-muted/60">07</span>
             <span className="text-border">/</span>
             <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
               {isBn ? "বর্তমান রোডম্যাপ ও ব্যস্ততা" : "Active Focus"}
@@ -317,7 +341,7 @@ export default async function HomePage({
       {/* 8. ELSEWHERE */}
       <section className="space-y-3 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">07</span>
+          <span className="font-mono text-[11px] text-muted/60">08</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "সরাসরি যোগাযোগের মাধ্যম" : "Direct Channels"}

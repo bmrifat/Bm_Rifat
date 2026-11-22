@@ -55,8 +55,8 @@ export const timeline: TimelineItem[] = [
   {
     period: "2023",
     title: {
-      en: "Client Solutions & Business Development [CONFIRM]",
-      bn: "ক্লায়েন্ট সলিউশনস ও বিজনেস ডেভেলপমেন্ট [CONFIRM]",
+      en: "Client Solutions & Business Development",
+      bn: "ক্লায়েন্ট সলিউশনস ও বিজনেস ডেভেলপমেন্ট",
     },
     org: {
       en: "Softstation",
@@ -64,7 +64,7 @@ export const timeline: TimelineItem[] = [
     },
     description: {
       en: "Structured web development solutions and compliant portal deployments for educational institutes, schools, and madrasas.",
-      bn: "বিভিন্ন শিক্ষাপ্রতিষ্ঠান ও মাদ্রাসার জন্য সরকারি মানসম্পন্ন ওয়েব পোর্টাল সেবা প্রদান।",
+      bn: "বিভিন্ন শিক্ষাপ্রতিষ্ঠান ও মাদ্রাসার জন্য মানসম্পন্ন ওয়েব পোর্টাল সেবা প্রদান।",
     },
     skills: ["Client Solutions", "Technical Sales", "Requirement Engineering"],
     type: "work",
@@ -72,8 +72,8 @@ export const timeline: TimelineItem[] = [
   {
     period: "2022 – 2023",
     title: {
-      en: "Marketing Strategy Lead [CONFIRM]",
-      bn: "মার্কেটিং স্ট্র্যাটেজি লিড [CONFIRM]",
+      en: "Marketing Strategy Lead",
+      bn: "মার্কেটিং স্ট্র্যাটেজি লিড",
     },
     org: {
       en: "Nationalian",

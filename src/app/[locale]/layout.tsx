@@ -43,8 +43,38 @@ export async function generateMetadata({
     },
     description: isBn
       ? "বাংলাদেশের জন্য স্বাস্থ্যপ্রযুক্তি তৈরি করছি। স্বাস্থ্য সাথী ও ডকক্লিনিকের প্রতিষ্ঠাতা ও সিইও।"
-      : "Building healthcare software for Bangladesh. Founder & CEO of SasthoSathi and DocClinic.",
+      : "Building sovereign healthcare software for Bangladesh. Founder & CEO of SasthoSathi and DocClinic.",
     metadataBase: new URL("https://bmrifat.com"),
+    openGraph: {
+      title: isBn
+        ? "বিএম রিফাত — সফটওয়্যার প্রকৌশলী ও প্রযুক্তি উদ্যোক্তা"
+        : "BM Rifat — Software Engineer & Tech Entrepreneur",
+      description: isBn
+        ? "স্বাস্থ্য সাথী ও ডকক্লিনিকের প্রতিষ্ঠাতা ও সিস্টেম আর্কিটেক্ট। Dream Big, Build Bigger."
+        : "Founder & System Architect of SasthoSathi and DocClinic. Dream Big, Build Bigger.",
+      url: `/${locale}`,
+      siteName: "BM Rifat",
+      images: [
+        {
+          url: "/rifat.jpg",
+          width: 682,
+          height: 1024,
+          alt: "BM Rifat — Founder & Systems Architect",
+        },
+      ],
+      locale: isBn ? "bn_BD" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: isBn
+        ? "বিএম রিফাত — সফটওয়্যার প্রকৌশলী ও প্রযুক্তি উদ্যোক্তা"
+        : "BM Rifat — Software Engineer & Tech Entrepreneur",
+      description: isBn
+        ? "স্বাস্থ্য সাথী ও ডকক্লিনিকের প্রতিষ্ঠাতা ও সিস্টেম আর্কিটেক্ট।"
+        : "Founder & System Architect of SasthoSathi and DocClinic.",
+      images: ["/rifat.jpg"],
+    },
     alternates: {
       canonical: `/${locale}`,
       languages: {
