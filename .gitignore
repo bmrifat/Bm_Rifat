@@ -36,3 +36,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI agent local skills & templates (not needed for web runtime/deployment)
+.agents/
+.claude/
+.github/
