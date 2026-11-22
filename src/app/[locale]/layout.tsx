@@ -46,6 +46,12 @@ export async function generateMetadata({
       ? "বাংলাদেশের জন্য স্বাস্থ্যপ্রযুক্তি তৈরি করছি। স্বাস্থ্য সাথী ও ডকক্লিনিকের প্রতিষ্ঠাতা ও সিইও।"
       : "Building sovereign healthcare software for Bangladesh. Founder & CEO of SasthoSathi and DocClinic.",
     metadataBase: new URL("https://bmrifat.com"),
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/icon.svg", type: "image/svg+xml" },
+      ],
+    },
     openGraph: {
       title: isBn
         ? "বিএম রিফাত — সফটওয়্যার প্রকৌশলী ও প্রযুক্তি উদ্যোক্তা"
