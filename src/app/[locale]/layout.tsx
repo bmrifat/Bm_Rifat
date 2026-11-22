@@ -43,8 +43,8 @@ export async function generateMetadata({
       template: isBn ? "%s | বিএম রিফাত" : "%s | BM Rifat",
     },
     description: isBn
-      ? "বাংলাদেশের জন্য স্বাস্থ্যপ্রযুক্তি তৈরি করছি। স্বাস্থ্য সাথী ও ডকক্লিনিকের প্রতিষ্ঠাতা ও সিইও।"
-      : "Building sovereign healthcare software for Bangladesh. Founder & CEO of SasthoSathi and DocClinic.",
+      ? "বাংলাদেশের জন্য স্বাস্থ্যপ্রযুক্তি তৈরি করছি। স্বাস্থ্যসাথীর প্রতিষ্ঠাতা ও সিইও, ডকক্লিনিকের প্রতিষ্ঠাতা ও সিস্টেম আর্কিটেক্ট।"
+      : "Building sovereign healthcare software for Bangladesh. Founder & CEO of SasthoSathi and Founder & System Architect of DocClinic.",
     metadataBase: new URL("https://bmrifat.com"),
     icons: {
       icon: [
