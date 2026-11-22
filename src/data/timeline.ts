@@ -21,8 +21,8 @@ export const timeline: TimelineItem[] = [
   {
     period: "2024 – Present",
     title: {
-      en: "Co-Founder & System Architect",
-      bn: "সহ-প্রতিষ্ঠাতা ও সিস্টেম আর্কিটেক্ট",
+      en: "Founder & System Architect",
+      bn: "প্রতিষ্ঠাতা ও সিস্টেম আর্কিটেক্ট",
     },
     org: {
       en: "DocClinic (Doctor Management SaaS)",
