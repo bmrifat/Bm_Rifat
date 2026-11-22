@@ -67,7 +67,6 @@ export default async function HomePage({
                 height={1024}
                 priority
                 unoptimized
-                quality={100}
                 className="w-full h-auto object-cover rounded-xl sm:rounded-2xl select-none"
               />
               {/* Subtle glassmorphic bottom bar over the image base */}
