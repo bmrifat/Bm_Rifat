@@ -29,22 +29,8 @@ export default async function HomePage({
     <div className="space-y-12 sm:space-y-16 pb-16">
       {/* 1. HERO & VISION */}
       <section className="space-y-6">
-        {/* Top bar: Portrait & Executive Operational Beacon */}
-        <div className="flex items-center justify-between gap-4">
-          <div className="relative group">
-            {/* Fine bezel frame with heirloom gold shimmer */}
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-surface via-surface-subtle to-surface border border-gold/30 p-1 shadow-soft transition-transform group-hover:scale-[1.02] overflow-hidden relative">
-              <Image
-                src={profile.avatar || "/rifat.jpg"}
-                alt={profile.name}
-                width={96}
-                height={96}
-                priority
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-          </div>
-
+        {/* Top bar: Operational Beacon & Identity Tag */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-[11.5px] bg-surface/90 border border-border/90 text-muted shadow-soft">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -54,18 +40,50 @@ export default async function HomePage({
               {isBn ? "ঢাকা · সক্রিয় আর্কিটেকচার ও উদ্ভাবন" : "Dhaka · Building Sovereign Systems"}
             </span>
           </div>
+
+          <span className="text-[11.5px] font-mono uppercase tracking-wider text-muted/70">
+            Founder & System Architect
+          </span>
         </div>
 
         {/* Identity Headings */}
         <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <h1 className="text-3xl sm:text-[38px] font-semibold text-text tracking-tight font-serif">
-              {profile.name}
-            </h1>
-          </div>
-          <p className="text-[16px] sm:text-[17px] text-muted font-normal leading-snug">
+          <h1 className="text-3xl sm:text-[40px] font-semibold text-text tracking-tight font-serif leading-tight">
+            {profile.name}
+          </h1>
+          <p className="text-[16.5px] sm:text-[18px] text-muted font-normal leading-snug">
             {profile.tagline[loc]}
           </p>
+        </div>
+
+        {/* Full Size Editorial Portrait Showcase */}
+        <div className="relative group my-4 sm:my-6">
+          <div className="w-full rounded-2xl sm:rounded-3xl bg-surface/70 border border-border/80 dark:border-border/60 p-2 sm:p-2.5 shadow-soft transition-transform group-hover:scale-[1.005] duration-300">
+            <div className="relative w-full overflow-hidden rounded-xl sm:rounded-2xl">
+              <Image
+                src={profile.avatar || "/rifat.jpg"}
+                alt={`${profile.name} - Software Developer & Tech Entrepreneur`}
+                width={682}
+                height={1024}
+                priority
+                className="w-full h-auto object-cover rounded-xl sm:rounded-2xl"
+              />
+              {/* Subtle glassmorphic bottom bar over the image base */}
+              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-5 flex items-end justify-between text-white select-none">
+                <div className="space-y-0.5">
+                  <p className="font-serif italic text-sm sm:text-base tracking-wide text-amber-200/90 font-medium">
+                    &ldquo;Dream Big, Build Bigger&rdquo;
+                  </p>
+                  <p className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/80">
+                    Tech · Innovation · Impact
+                  </p>
+                </div>
+                <span className="text-[11px] font-mono text-white/80 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                  BM Rifat
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Executive Bio */}
