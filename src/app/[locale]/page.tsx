@@ -58,7 +58,7 @@ export default async function HomePage({
 
         {/* Full Size Editorial Portrait Showcase */}
         <div className="relative group my-4 sm:my-6">
-          <div className="w-full rounded-2xl sm:rounded-3xl bg-surface/70 border border-border/80 dark:border-border/60 p-2 sm:p-2.5 shadow-soft transition-transform group-hover:scale-[1.005] duration-300">
+          <div className="w-full max-w-[540px] mx-auto rounded-2xl sm:rounded-3xl bg-surface/70 border border-border/80 dark:border-border/60 p-2 sm:p-2.5 shadow-soft transition-transform group-hover:scale-[1.005] duration-300">
             <div className="relative w-full overflow-hidden rounded-xl sm:rounded-2xl">
               <Image
                 src={profile.avatar || "/rifat.jpg"}
@@ -66,7 +66,9 @@ export default async function HomePage({
                 width={682}
                 height={1024}
                 priority
-                className="w-full h-auto object-cover rounded-xl sm:rounded-2xl"
+                unoptimized
+                quality={100}
+                className="w-full h-auto object-cover rounded-xl sm:rounded-2xl select-none"
               />
               {/* Subtle glassmorphic bottom bar over the image base */}
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-5 flex items-end justify-between text-white select-none">
