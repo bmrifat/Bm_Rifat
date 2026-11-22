@@ -28,10 +28,10 @@ export default async function VenturesIndexPage({
       </div>
 
       <div className="space-y-1.5 pb-6 border-b border-border/70">
-        <h1 className="text-2xl sm:text-[30px] font-semibold text-text tracking-tight">
+        <h1 className="text-2xl sm:text-[30px] font-semibold text-text tracking-tight text-balance">
           {isBn ? "উদ্যোগসমূহ" : "Ventures & Systems"}
         </h1>
-        <p className="text-[15.5px] text-muted">
+        <p className="text-[15.5px] text-muted text-balance">
           {isBn
             ? "বাংলাদেশের স্বাস্থ্যসেবার উপযোগী প্রোডাকশন সফটওয়্যার আর্কিটেকচার।"
             : "Production healthcare software platforms engineered for Bangladesh."}
@@ -42,7 +42,7 @@ export default async function VenturesIndexPage({
         {ventures.map((venture, idx) => (
           <div
             key={venture.slug}
-            className="group relative -mx-3 sm:-mx-4 p-4 rounded-xl hover:bg-surface/90 hover:shadow-soft border border-transparent hover:border-border/70 transition-all duration-200"
+            className="group relative -mx-3 sm:-mx-4 p-4 rounded-xl bg-surface/40 hover:bg-surface/90 hover:shadow-soft border border-border/60 hover:border-gold/50 hover:-translate-y-0.5 transition-all duration-200"
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
               <div className="space-y-1">

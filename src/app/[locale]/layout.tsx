@@ -6,6 +6,7 @@ import { routing, Locale } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { BackToTop } from "@/components/ui/BackToTop";
 import { Inter, Hind_Siliguri } from "next/font/google";
 import clsx from "clsx";
 
@@ -148,6 +149,9 @@ export default async function LocaleLayout({
               </main>
               <Footer />
             </div>
+
+            {/* Back to top floating indicator */}
+            <BackToTop isBn={locale === "bn"} />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

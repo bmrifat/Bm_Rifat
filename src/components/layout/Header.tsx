@@ -28,11 +28,11 @@ export const Header: React.FC = () => {
       {/* Right Nav */}
       <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-muted">
         <Link
-          href="/ventures/sasthosathi"
+          href="/ventures"
           className={
             isVentures
-              ? "text-text font-medium border-b border-text/80 pb-0.5"
-              : "hover:text-text transition-colors"
+              ? "text-text font-medium bg-surface border border-border/80 px-2.5 py-1 rounded-md shadow-xs"
+              : "hover:text-text px-2 py-1 rounded-md transition-colors"
           }
         >
           {t("ventures")}
@@ -41,8 +41,8 @@ export const Header: React.FC = () => {
           href="/writing"
           className={
             isWriting
-              ? "text-text font-medium border-b border-text/80 pb-0.5"
-              : "hover:text-text transition-colors"
+              ? "text-text font-medium bg-surface border border-border/80 px-2.5 py-1 rounded-md shadow-xs"
+              : "hover:text-text px-2 py-1 rounded-md transition-colors"
           }
         >
           {t("writing")}
@@ -51,8 +51,8 @@ export const Header: React.FC = () => {
           href="/contact"
           className={
             isContact
-              ? "text-text font-medium border-b border-text/80 pb-0.5"
-              : "hover:text-text transition-colors"
+              ? "text-text font-medium bg-surface border border-border/80 px-2.5 py-1 rounded-md shadow-xs"
+              : "hover:text-text px-2 py-1 rounded-md transition-colors"
           }
         >
           {t("contact")}

@@ -43,10 +43,10 @@ export default async function ContactPage({
       </div>
 
       <div className="space-y-1.5 pb-6 border-b border-border/70">
-        <h1 className="text-2xl sm:text-[30px] font-semibold text-text tracking-tight">
+        <h1 className="text-2xl sm:text-[30px] font-semibold text-text tracking-tight text-balance">
           {isBn ? "যোগাযোগ" : "Contact"}
         </h1>
-        <p className="text-[15.5px] text-muted">
+        <p className="text-[15.5px] text-muted text-balance">
           {isBn
             ? "আমার সাথে যোগাযোগের সবচেয়ে দ্রুত ও সরাসরি মাধ্যম হলো ইমেইল।"
             : "The most direct way to reach me is by email."}

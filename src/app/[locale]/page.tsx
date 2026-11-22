@@ -45,7 +45,7 @@ export default async function HomePage({
           <div className="flex flex-col items-end gap-2 text-right">
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-[11.5px] bg-surface/90 border border-border/90 text-muted shadow-soft">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-live" />
               </span>
               <span className="text-text font-medium text-[11.5px] tracking-tight">
@@ -61,10 +61,10 @@ export default async function HomePage({
 
         {/* Identity Headings */}
         <div className="space-y-2">
-          <h1 className="text-3xl sm:text-[40px] font-semibold text-text tracking-tight font-serif leading-tight">
+          <h1 className="text-3xl sm:text-[40px] font-semibold text-text tracking-tight font-serif leading-tight text-balance">
             {profile.name}
           </h1>
-          <p className="text-[16.5px] sm:text-[18px] text-muted font-normal leading-snug">
+          <p className="text-[16.5px] sm:text-[18px] text-muted font-normal leading-snug text-balance">
             {profile.tagline[loc]}
           </p>
         </div>
@@ -148,7 +148,7 @@ export default async function HomePage({
           {ventures.map((venture) => (
             <div
               key={venture.slug}
-              className="group relative -mx-3 sm:-mx-4 p-4 sm:p-4.5 rounded-xl bg-surface/50 hover:bg-surface hover:shadow-soft border border-border/60 hover:border-border transition-all duration-200"
+              className="group relative -mx-3 sm:-mx-4 p-4 sm:p-4.5 rounded-xl bg-surface/50 hover:bg-surface hover:shadow-soft border border-border/60 hover:border-gold/50 hover:-translate-y-0.5 transition-all duration-200"
             >
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1.5 sm:gap-4">
                 <div className="space-y-1.5">
