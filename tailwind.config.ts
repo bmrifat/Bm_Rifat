@@ -37,8 +37,8 @@ const config: Config = {
         reading: "680px",
       },
       boxShadow: {
-        soft: "0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 2px -1px rgba(0, 0, 0, 0.02)",
-        glow: "0 10px 30px -10px rgba(0, 0, 0, 0.05)",
+        soft: "0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.03)",
+        glow: "0 12px 36px -8px rgba(143, 99, 25, 0.12)",
       },
     },
   },
