@@ -7,6 +7,7 @@ import { books } from "@/data/books";
 import { galleryItems } from "@/data/gallery";
 import { ContactSubmissionSchema } from "@/lib/validators";
 import { rateLimit } from "@/lib/rate-limit";
+import { hashIp, normalizeReferrer, recordVisit, getAnalyticsStats } from "@/lib/analytics";
 
 describe("Minimal v2 Portfolio Data Integrity", () => {
   it("has valid profile facts with DIU = Dhaka International University", () => {
@@ -163,5 +164,48 @@ describe("Contact Validation & Rate Limiting", () => {
     const blocked = await rateLimit(testIp, 5, 10000);
     expect(blocked.success).toBe(false);
     expect(blocked.remaining).toBe(0);
+  });
+});
+
+describe("Sovereign Telemetry & Analytics Engine", () => {
+  it("anonymizes IP address with cryptographic hashing", () => {
+    const rawIp = "103.205.12.89";
+    const hashed = hashIp(rawIp);
+    expect(hashed).toHaveLength(16);
+    expect(hashed).not.toContain(rawIp);
+    expect(hashIp(rawIp)).toBe(hashed); // deterministic within the same day
+  });
+
+  it("normalizes referrer channels correctly", () => {
+    expect(normalizeReferrer("https://github.com/bmrifat")).toBe("GitHub");
+    expect(normalizeReferrer("https://www.linkedin.com/feed/")).toBe("LinkedIn");
+    expect(normalizeReferrer("https://www.google.com/search?q=bm+rifat")).toBe("Google Search");
+    expect(normalizeReferrer("")).toBe("Direct / Bookmark");
+    expect(normalizeReferrer("https://bmrifat.com/ventures")).toBe("Direct / Bookmark");
+  });
+
+  it("records telemetry and calculates aggregated stats", () => {
+    const event = recordVisit({
+      path: "/en/ventures/sasthosathi",
+      referrer: "LinkedIn",
+      device: "desktop",
+      browser: "Chrome",
+      country: "Bangladesh",
+      city: "Dhaka",
+      durationSec: 85,
+      locale: "en",
+    });
+
+    expect(event.id).toBeDefined();
+    expect(event.timestamp).toBeDefined();
+
+    const stats = getAnalyticsStats();
+    expect(stats.totalPageviews).toBeGreaterThan(0);
+    expect(stats.uniqueVisitors).toBeGreaterThan(0);
+    expect(stats.dailyTraffic.length).toBe(7);
+    expect(stats.topPages.length).toBeGreaterThan(0);
+    expect(stats.devices.length).toBe(3);
+    expect(stats.countries.length).toBeGreaterThan(0);
+    expect(stats.recentEvents.length).toBeGreaterThan(0);
   });
 });

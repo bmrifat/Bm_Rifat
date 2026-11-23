@@ -23,6 +23,14 @@ export const Footer: React.FC = () => {
           >
             {t("privacy")}
           </Link>
+          <Link
+            href="/admin"
+            className="hover:text-gold transition-colors font-mono text-[11.5px] opacity-75 hover:opacity-100 flex items-center gap-1"
+            title="Executive Telemetry Console"
+          >
+            <span>Telemetry</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-live inline-block" />
+          </Link>
         </div>
       </div>
     </footer>

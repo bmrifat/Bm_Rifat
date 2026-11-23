@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { AnalyticsTracker } from "@/components/analytics/AnalyticsTracker";
 import { Inter, Hind_Siliguri } from "next/font/google";
 import clsx from "clsx";
 
@@ -127,6 +128,9 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
+            {/* Sovereign Privacy-Preserving Telemetry Tracker */}
+            <AnalyticsTracker />
+
             {/* Ambient luxury radial glow */}
             <div
               aria-hidden="true"
