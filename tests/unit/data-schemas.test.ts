@@ -4,6 +4,7 @@ import { profile } from "@/data/profile";
 import { posts } from "@/data/posts";
 import { timeline } from "@/data/timeline";
 import { books } from "@/data/books";
+import { galleryItems } from "@/data/gallery";
 import { ContactSubmissionSchema } from "@/lib/validators";
 import { rateLimit } from "@/lib/rate-limit";
 
@@ -59,6 +60,30 @@ describe("Minimal v2 Portfolio Data Integrity", () => {
     expect(bookIds).toContain("high-output-management");
     expect(bookIds).toContain("thinking-in-systems");
     expect(bookIds).toContain("gitanjali");
+  });
+
+  it("has valid visual chronicle and achievements gallery items", () => {
+    expect(galleryItems.length).toBeGreaterThanOrEqual(5);
+
+    const categories = new Set(galleryItems.map((item) => item.category));
+    expect(categories.has("startups")).toBe(true);
+    expect(categories.has("achievements")).toBe(true);
+    expect(categories.has("speaking")).toBe(true);
+    expect(categories.has("fieldwork")).toBe(true);
+
+    for (const item of galleryItems) {
+      expect(item.id.length).toBeGreaterThan(0);
+      expect(item.title.en.length).toBeGreaterThan(0);
+      expect(item.title.bn.length).toBeGreaterThan(0);
+      expect(item.src.length).toBeGreaterThan(0);
+      expect(item.caption.en.length).toBeGreaterThan(0);
+      expect(item.caption.bn.length).toBeGreaterThan(0);
+      expect(item.tags.length).toBeGreaterThan(0);
+      expect(["image", "video"]).toContain(item.mediaType);
+      if (item.mediaType === "video") {
+        expect(item.videoUrl).toBeDefined();
+      }
+    }
   });
 });
 

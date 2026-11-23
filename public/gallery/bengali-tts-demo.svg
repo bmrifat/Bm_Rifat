@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181216"/>
+      <stop offset="50%" stop-color="#24151e"/>
+      <stop offset="100%" stop-color="#0c0709"/>
+    </linearGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#dfb15b"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  
+  <!-- Video Player Preview Play Button in Center -->
+  <circle cx="400" cy="200" r="48" fill="rgba(251, 113, 133, 0.2)" stroke="url(#roseGold)" stroke-width="2"/>
+  <circle cx="400" cy="200" r="36" fill="url(#roseGold)"/>
+  <polygon points="392,185 416,200 392,215" fill="#181216"/>
+  
+  <!-- Audio spectrum waveform -->
+  <rect x="220" y="290" width="8" height="30" rx="4" fill="rgba(251, 113, 133, 0.4)"/>
+  <rect x="240" y="275" width="8" height="60" rx="4" fill="rgba(251, 113, 133, 0.6)"/>
+  <rect x="260" y="260" width="8" height="90" rx="4" fill="rgba(251, 113, 133, 0.8)"/>
+  <rect x="280" y="280" width="8" height="50" rx="4" fill="rgba(251, 113, 133, 0.5)"/>
+  <rect x="300" y="250" width="8" height="110" rx="4" fill="url(#roseGold)"/>
+  <rect x="320" y="270" width="8" height="70" rx="4" fill="rgba(251, 113, 133, 0.7)"/>
+  
+  <rect x="470" y="270" width="8" height="70" rx="4" fill="rgba(251, 113, 133, 0.7)"/>
+  <rect x="490" y="250" width="8" height="110" rx="4" fill="url(#roseGold)"/>
+  <rect x="510" y="280" width="8" height="50" rx="4" fill="rgba(251, 113, 133, 0.5)"/>
+  <rect x="530" y="260" width="8" height="90" rx="4" fill="rgba(251, 113, 133, 0.8)"/>
+  <rect x="550" y="275" width="8" height="60" rx="4" fill="rgba(251, 113, 133, 0.6)"/>
+  <rect x="570" y="290" width="8" height="30" rx="4" fill="rgba(251, 113, 133, 0.4)"/>
+  
+  <!-- Info card -->
+  <rect x="50" y="380" width="700" height="80" rx="12" fill="rgba(28, 18, 24, 0.85)" stroke="rgba(251, 113, 133, 0.3)" stroke-width="1"/>
+  <text x="80" y="415" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#f7f4ed">Bengali Medical Voice Synthesis &amp; OCR Demo</text>
+  <text x="80" y="442" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#fda4af">Interactive Video Presentation · Offline Bengali TTS for Prescriptions</text>
+  <rect x="610" y="405" width="110" height="28" rx="14" fill="rgba(251, 113, 133, 0.15)" stroke="rgba(251, 113, 133, 0.4)" stroke-width="1"/>
+  <text x="665" y="424" text-anchor="middle" font-family="monospace" font-size="11" font-weight="600" fill="#fb7185">VIDEO DEMO</text>
+</svg>

@@ -5,10 +5,12 @@ import { profile } from "@/data/profile";
 import { ventures } from "@/data/ventures";
 import { timeline } from "@/data/timeline";
 import { books } from "@/data/books";
+import { galleryItems } from "@/data/gallery";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { PortraitLightbox } from "@/components/ui/PortraitLightbox";
 import { PassionsSection } from "@/components/ui/PassionsSection";
 import { TimelineSection } from "@/components/ui/TimelineSection";
+import { GallerySection } from "@/components/ui/GallerySection";
 import {
   ArrowUpRight,
   Mail,
@@ -237,10 +239,30 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* 4. CONVICTIONS & INTERESTS */}
+      {/* 4. VISUAL CHRONICLE & ACHIEVEMENTS GALLERY */}
+      {galleryItems && galleryItems.length > 0 && (
+        <section className="space-y-4 pt-10 border-t border-border/70">
+          <div className="flex items-center justify-between pb-1">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-[11px] text-muted/60">04</span>
+              <span className="text-border">/</span>
+              <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
+                {isBn ? "ভিজ্যুয়াল ক্রনিকল ও অর্জন গ্যালারি" : "Visual Chronicle & Milestones"}
+              </h2>
+            </div>
+            <span className="text-[11.5px] text-muted/60 font-mono">
+              {galleryItems.length} {isBn ? "টি বিশেষ মুহূর্ত" : "Featured Moments"}
+            </span>
+          </div>
+
+          <GallerySection items={galleryItems} isBn={isBn} />
+        </section>
+      )}
+
+      {/* 5. CONVICTIONS & INTERESTS */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">04</span>
+          <span className="font-mono text-[11px] text-muted/60">05</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "দূরদর্শিতা ও আগ্রহের বিষয়" : "Convictions & Focus Areas"}
@@ -260,12 +282,12 @@ export default async function HomePage({
         </ul>
       </section>
 
-      {/* 5. PASSIONS & PERSONAL PURSUITS */}
+      {/* 6. PASSIONS & PERSONAL PURSUITS */}
       {profile.passions && (
         <section className="space-y-4 pt-10 border-t border-border/70">
           <div className="flex items-center justify-between pb-1">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-[11px] text-muted/60">05</span>
+              <span className="font-mono text-[11px] text-muted/60">06</span>
               <span className="text-border">/</span>
               <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
                 {isBn ? "প্যাশন ও ব্যক্তিগত অনুরাগ" : "Passions & Personal Pursuits"}
@@ -285,10 +307,10 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* 6. ALSO (INSTITUTIONAL ROLES & VENTURES) */}
+      {/* 7. ALSO (INSTITUTIONAL ROLES & VENTURES) */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">06</span>
+          <span className="font-mono text-[11px] text-muted/60">07</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "প্রাতিষ্ঠানিক দায়িত্ব ও ভূমিকা" : "Institutional Roles"}
@@ -313,11 +335,11 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 7. NOW */}
+      {/* 8. NOW */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center justify-between pb-1">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[11px] text-muted/60">07</span>
+            <span className="font-mono text-[11px] text-muted/60">08</span>
             <span className="text-border">/</span>
             <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
               {isBn ? "বর্তমান রোডম্যাপ ও ব্যস্ততা" : "Active Focus"}
@@ -338,10 +360,10 @@ export default async function HomePage({
         </ul>
       </section>
 
-      {/* 8. ELSEWHERE */}
+      {/* 9. ELSEWHERE */}
       <section className="space-y-3 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">08</span>
+          <span className="font-mono text-[11px] text-muted/60">09</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "সরাসরি যোগাযোগের মাধ্যম" : "Direct Channels"}
