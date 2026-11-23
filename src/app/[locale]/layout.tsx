@@ -10,6 +10,7 @@ import { BackToTop } from "@/components/ui/BackToTop";
 import { AnalyticsTracker } from "@/components/analytics/AnalyticsTracker";
 import { Inter, Hind_Siliguri } from "next/font/google";
 import clsx from "clsx";
+import "@/styles/globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -147,13 +148,13 @@ export default async function LocaleLayout({
 
             {/* Sticky subtle glassmorphic header container */}
             <div className="sticky top-0 z-40 backdrop-blur-md bg-bg/85 border-b border-border/60 transition-colors">
-              <div className="max-w-reading mx-auto px-6 sm:px-8">
+              <div className="max-w-reading has-[~div_.admin-viewport]:max-w-5xl mx-auto px-6 sm:px-8 transition-all duration-300">
                 <Header />
               </div>
             </div>
 
-            {/* Single column, max-width: 680px, centered content */}
-            <div className="max-w-reading mx-auto px-6 sm:px-8 pt-8 sm:pt-10">
+            {/* Content container: 680px for reading, expands to 5xl for admin dashboard */}
+            <div className="max-w-reading has-[.admin-viewport]:max-w-5xl mx-auto px-6 sm:px-8 pt-8 sm:pt-10 transition-all duration-300">
               <main id="main-content">
                 {children}
               </main>

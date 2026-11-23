@@ -8,6 +8,8 @@ export const ArrowUpRight: React.FC<IconProps> = ({ className = "w-4 h-4", ...pr
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -25,6 +27,8 @@ export const ArrowLeft: React.FC<IconProps> = ({ className = "w-4 h-4", ...props
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -42,6 +46,8 @@ export const Mail: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) =
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -59,6 +65,8 @@ export const Github: React.FC<IconProps> = ({ className = "w-4 h-4", ...props })
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -76,6 +84,8 @@ export const Linkedin: React.FC<IconProps> = ({ className = "w-4 h-4", ...props 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -94,6 +104,8 @@ export const Clock: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -111,6 +123,8 @@ export const Calendar: React.FC<IconProps> = ({ className = "w-4 h-4", ...props 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -130,6 +144,8 @@ export const ShieldCheck: React.FC<IconProps> = ({ className = "w-4 h-4", ...pro
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -147,6 +163,8 @@ export const Cpu: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) =>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -165,6 +183,8 @@ export const Sun: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) =>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -182,6 +202,8 @@ export const Moon: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) =
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -198,6 +220,8 @@ export const AlertTriangle: React.FC<IconProps> = ({ className = "w-4 h-4", ...p
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -216,6 +240,8 @@ export const RotateCcw: React.FC<IconProps> = ({ className = "w-4 h-4", ...props
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -233,6 +259,8 @@ export const Home: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) =
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -250,6 +278,8 @@ export const Code2: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -267,6 +297,8 @@ export const MapPin: React.FC<IconProps> = ({ className = "w-4 h-4", ...props })
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -284,6 +316,8 @@ export const Sparkles: React.FC<IconProps> = ({ className = "w-4 h-4", ...props 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -304,6 +338,8 @@ export const Phone: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -320,6 +356,8 @@ export const Play: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) =
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="currentColor"
     className={className}
     {...props}
@@ -332,6 +370,8 @@ export const ChevronLeft: React.FC<IconProps> = ({ className = "w-4 h-4", ...pro
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -348,6 +388,8 @@ export const ChevronRight: React.FC<IconProps> = ({ className = "w-4 h-4", ...pr
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -364,6 +406,8 @@ export const X: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -381,6 +425,8 @@ export const Maximize2: React.FC<IconProps> = ({ className = "w-4 h-4", ...props
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -400,6 +446,8 @@ export const Award: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -417,6 +465,8 @@ export const Video: React.FC<IconProps> = ({ className = "w-4 h-4", ...props }) 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -434,6 +484,8 @@ export const ImageIcon: React.FC<IconProps> = ({ className = "w-4 h-4", ...props
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="24"
+    height="24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"

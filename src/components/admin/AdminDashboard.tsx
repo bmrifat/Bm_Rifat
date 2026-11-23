@@ -121,7 +121,7 @@ export const AdminDashboard: React.FC = () => {
   // 1. PIN / Authentication Screen
   if (!isAuthenticated) {
     return (
-      <div className="min-h-[70vh] flex items-center justify-center py-12 px-4">
+      <div className="admin-viewport min-h-[70vh] flex items-center justify-center py-12 px-4">
         <div className="w-full max-w-md bg-surface border border-border/80 rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
           <div className="space-y-2 text-center">
             <div className="w-12 h-12 rounded-full bg-gold/10 border border-gold/30 text-gold flex items-center justify-center mx-auto mb-3">
@@ -203,7 +203,7 @@ export const AdminDashboard: React.FC = () => {
   const maxDayViews = Math.max(...stats.dailyTraffic.map((d) => d.views), 10);
 
   return (
-    <div className="space-y-8 pb-16">
+    <div className="admin-viewport space-y-8 pb-16">
       {/* Top Header / Operational Beacon */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-border/80">
         <div className="space-y-1">
