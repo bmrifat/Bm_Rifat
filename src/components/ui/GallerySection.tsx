@@ -173,6 +173,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 alt={item.title[loc]}
                 fill
                 sizes="(max-width: 640px) 100vw, 340px"
+                unoptimized={item.src.endsWith(".svg") || item.src.startsWith("/gallery/")}
                 className="object-cover group-hover:scale-[1.03] motion-reduce:transform-none transition-transform duration-500 ease-out"
                 priority={idx < 2}
               />
@@ -302,6 +303,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                     alt={selectedItem.title[loc]}
                     fill
                     sizes="(max-width: 1024px) 100vw, 1024px"
+                    unoptimized={selectedItem.src.endsWith(".svg") || selectedItem.src.startsWith("/gallery/")}
                     className="object-contain p-2"
                     priority
                   />
