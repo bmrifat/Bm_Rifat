@@ -25,12 +25,25 @@ export async function POST(req: NextRequest) {
     }
 
     // 2. Parse and validate payload
-    const body = await req.json();
+    let body: unknown;
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid JSON payload in request." },
+        { status: 400 }
+      );
+    }
+
     const result = ContactSubmissionSchema.safeParse(body);
 
     if (!result.success) {
+      const fieldErrors = result.error.flatten().fieldErrors;
+      const firstError =
+        Object.values(fieldErrors).flat()[0] || "Validation failed";
+      console.warn("[Contact API] 400 Validation Error:", fieldErrors);
       return NextResponse.json(
-        { error: "Validation failed", details: result.error.flatten().fieldErrors },
+        { error: firstError, details: fieldErrors },
         { status: 400 }
       );
     }

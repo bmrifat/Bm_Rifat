@@ -70,18 +70,14 @@ export const PostSchema = z.object({
 export type Post = z.infer<typeof PostSchema>;
 
 export const ContactSubmissionSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters").max(100),
-  email: z.string().email("Please provide a valid email address"),
-  organization: z.string().max(100).optional(),
-  intent: z.enum([
-    "partnership",
-    "demo",
-    "hiring",
-    "speaking",
-    "other",
-  ]),
-  message: z.string().min(10, "Message must be at least 10 characters").max(3000),
-  honeypot: z.string().max(0, "Bot detected").optional(),
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
+  email: z.string().trim().email("Please provide a valid email address"),
+  organization: z.string().trim().max(100).optional(),
+  intent: z
+    .enum(["partnership", "demo", "hiring", "speaking", "other"])
+    .default("other"),
+  message: z.string().trim().min(3, "Message must be at least 3 characters").max(3000),
+  honeypot: z.string().optional(),
   turnstileToken: z.string().optional(),
 });
 

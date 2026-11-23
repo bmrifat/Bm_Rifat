@@ -85,6 +85,38 @@ describe("Contact Validation & Rate Limiting", () => {
     expect(result.success).toBe(false);
   });
 
+  it("accepts short note messages of 3+ characters and defaults intent", () => {
+    const shortValid = {
+      name: "Dr. Alim",
+      email: "alim@example.com",
+      message: "Hi!",
+    };
+    const result = ContactSubmissionSchema.safeParse(shortValid);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.intent).toBe("other");
+    }
+
+    const tooShort = {
+      name: "Dr. Alim",
+      email: "alim@example.com",
+      message: "Hi",
+    };
+    const resultTooShort = ContactSubmissionSchema.safeParse(tooShort);
+    expect(resultTooShort.success).toBe(false);
+  });
+
+  it("allows honeypot in schema so API handler can trap bots silently", () => {
+    const withHoneypot = {
+      name: "Spam Bot",
+      email: "bot@spam.com",
+      message: "Check out my link",
+      honeypot: "https://spam.com",
+    };
+    const result = ContactSubmissionSchema.safeParse(withHoneypot);
+    expect(result.success).toBe(true);
+  });
+
   it("rate limits rapid requests per IP", async () => {
     const testIp = "10.0.0.55";
     for (let i = 0; i < 5; i++) {

@@ -28,11 +28,11 @@ export const ContactForm: React.FC = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
-          email,
+          name: name.trim(),
+          email: email.trim(),
           intent: "other",
-          message,
-          honeypot,
+          message: message.trim(),
+          honeypot: honeypot.trim(),
         }),
       });
 
@@ -83,8 +83,11 @@ export const ContactForm: React.FC = () => {
           id="name"
           type="text"
           required
+          minLength={2}
+          maxLength={100}
           value={name}
           onChange={(e) => setName(e.target.value)}
+          placeholder={isBn ? "আপনার পুরো নাম" : "Your full name"}
           className="w-full px-3 py-2 text-[14.5px] rounded-md border border-border/80 bg-surface/80 text-text placeholder:text-muted/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors"
         />
       </div>
@@ -99,6 +102,7 @@ export const ContactForm: React.FC = () => {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          placeholder={isBn ? "example@domain.com" : "example@domain.com"}
           className="w-full px-3 py-2 text-[14.5px] rounded-md border border-border/80 bg-surface/80 text-text placeholder:text-muted/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors"
         />
       </div>
@@ -111,8 +115,11 @@ export const ContactForm: React.FC = () => {
           id="message"
           rows={4}
           required
+          minLength={3}
+          maxLength={3000}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          placeholder={isBn ? "আপনার বার্তা বা প্রস্তাব লিখুন..." : "Your note, proposal or question..."}
           className="w-full px-3 py-2 text-[14.5px] rounded-md border border-border/80 bg-surface/80 text-text placeholder:text-muted/50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent transition-colors resize-none leading-relaxed"
         />
       </div>
