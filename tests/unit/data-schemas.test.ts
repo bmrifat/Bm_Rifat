@@ -85,32 +85,44 @@ describe("Contact Validation & Rate Limiting", () => {
     expect(result.success).toBe(false);
   });
 
-  it("accepts short note messages of 3+ characters and defaults intent", () => {
-    const shortValid = {
+  it("accepts valid message with 20+ characters and meaningful text", () => {
+    const valid = {
       name: "Dr. Alim",
       email: "alim@example.com",
-      message: "Hi!",
+      message: "We would like to test the DocClinic prescription desk in our chamber.",
     };
-    const result = ContactSubmissionSchema.safeParse(shortValid);
+    const result = ContactSubmissionSchema.safeParse(valid);
     expect(result.success).toBe(true);
     if (result.success) {
       expect(result.data.intent).toBe("other");
     }
+  });
 
+  it("rejects messages under 20 characters", () => {
     const tooShort = {
       name: "Dr. Alim",
       email: "alim@example.com",
-      message: "Hi",
+      message: "Hello there!",
     };
-    const resultTooShort = ContactSubmissionSchema.safeParse(tooShort);
-    expect(resultTooShort.success).toBe(false);
+    const result = ContactSubmissionSchema.safeParse(tooShort);
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects repetitive spam character sequences", () => {
+    const spam = {
+      name: "Dr. Alim",
+      email: "alim@example.com",
+      message: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    };
+    const result = ContactSubmissionSchema.safeParse(spam);
+    expect(result.success).toBe(false);
   });
 
   it("allows honeypot in schema so API handler can trap bots silently", () => {
     const withHoneypot = {
       name: "Spam Bot",
       email: "bot@spam.com",
-      message: "Check out my link",
+      message: "Check out this great website offering special medicine discounts",
       honeypot: "https://spam.com",
     };
     const result = ContactSubmissionSchema.safeParse(withHoneypot);

@@ -76,7 +76,24 @@ export const ContactSubmissionSchema = z.object({
   intent: z
     .enum(["partnership", "demo", "hiring", "speaking", "other"])
     .default("other"),
-  message: z.string().trim().min(3, "Message must be at least 3 characters").max(3000),
+  message: z
+    .string()
+    .trim()
+    .min(20, "Message must be at least 20 characters with meaningful context")
+    .max(3000)
+    .refine(
+      (val) => {
+        const lettersOnly = val.replace(/[\s\d\p{P}]/gu, "").toLowerCase();
+        // Must contain at least some alphabetic/Bengali letters
+        if (lettersOnly.length < 5) return false;
+        // Avoid repetitive character spam like "aaaaaaaaaaaa..."
+        const uniqueChars = new Set(lettersOnly);
+        return uniqueChars.size >= 4;
+      },
+      {
+        message: "Please enter a valid, meaningful message (avoid repetitive characters).",
+      }
+    ),
   honeypot: z.string().optional(),
   turnstileToken: z.string().optional(),
 });
