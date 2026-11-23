@@ -148,7 +148,7 @@ export default async function LocaleLayout({
 
             {/* Sticky subtle glassmorphic header container */}
             <div className="sticky top-0 z-40 backdrop-blur-md bg-bg/85 border-b border-border/60 transition-colors">
-              <div className="max-w-reading has-[~div_.admin-viewport]:max-w-5xl mx-auto px-6 sm:px-8 transition-all duration-300">
+              <div className="max-w-reading mx-auto px-6 sm:px-8 transition-all duration-300">
                 <Header />
               </div>
             </div>
