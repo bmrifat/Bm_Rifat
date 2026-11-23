@@ -1,6 +1,11 @@
 import React from "react";
 import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { AdminDashboard } from "@/components/admin/AdminDashboard";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,

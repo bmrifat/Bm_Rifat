@@ -3,7 +3,11 @@ import { setRequestLocale } from "next-intl/server";
 import { profile } from "@/data/profile";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Mail, Clock, ArrowLeft, Phone } from "@/components/ui/Icons";
-import { Link } from "@/i18n/routing";
+import { Link, routing } from "@/i18n/routing";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
