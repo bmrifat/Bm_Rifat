@@ -1,6 +1,6 @@
 import React from "react";
 import { setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/routing";
+import { Link, routing } from "@/i18n/routing";
 import { profile } from "@/data/profile";
 import { ventures } from "@/data/ventures";
 import { timeline } from "@/data/timeline";
@@ -24,6 +24,10 @@ import {
   Mail,
   Phone,
 } from "@/components/ui/Icons";
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function HomePage({
   params,
