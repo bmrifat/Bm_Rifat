@@ -16,8 +16,9 @@ describe("Minimal v2 Portfolio Data Integrity", () => {
     expect(profile.communityRole).toContain("DIU CSE Speakers Club");
     expect(profile.interests.length).toBeGreaterThanOrEqual(4);
     expect(profile.also.length).toBe(3);
-    expect(profile.passions.length).toBe(8);
+    expect(profile.passions.length).toBe(9);
     const passionIds = profile.passions.map((p) => p.id);
+    expect(passionIds).toContain("do-nothing");
     expect(passionIds).toContain("poetry");
     expect(passionIds).toContain("reading");
     expect(passionIds).toContain("traveling");

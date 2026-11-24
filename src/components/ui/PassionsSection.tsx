@@ -14,13 +14,14 @@ import {
   X,
   ExternalLink,
   Quote,
+  Coffee,
 } from "lucide-react";
 import { BookItem } from "@/data/books";
 
 export interface PassionItem {
   id: string;
   icon: string;
-  group: "arts" | "outdoors" | "kinship" | string;
+  group: "arts" | "outdoors" | "kinship" | "mindfulness" | string;
   title: {
     en: string;
     bn: string;
@@ -51,6 +52,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Sprout,
   Heart,
   Users,
+  Coffee,
+  Sparkles,
 };
 
 export function PassionsSection({
@@ -83,12 +86,13 @@ export function PassionsSection({
 
   const filterTabs = useMemo(
     () => [
-      { id: "all", label: isBn ? "সবগুলো (৮)" : "All Pursuits (8)" },
+      { id: "all", label: isBn ? `সবগুলো (${passions.length})` : `All Pursuits (${passions.length})` },
+      { id: "mindfulness", label: isBn ? "মনন ও নিস্তব্ধতা" : "Stillness & Zen" },
       { id: "arts", label: isBn ? "সাহিত্য ও শিল্প" : "Arts & Literature" },
       { id: "outdoors", label: isBn ? "প্রকৃতি ও গতি" : "Nature & Motion" },
       { id: "kinship", label: isBn ? "পরিবার ও বন্ধন" : "Family & Kinship" },
     ],
-    [isBn]
+    [isBn, passions.length]
   );
 
   const filteredPassions = useMemo(() => {
@@ -125,11 +129,16 @@ export function PassionsSection({
           {filteredPassions.map((passion) => {
             const IconComponent = iconMap[passion.icon] || Sparkles;
             const isReading = passion.id === "reading";
+            const isDoNothing = passion.id === "do-nothing";
 
             return (
               <div
                 key={passion.id}
-                className="group p-3.5 sm:p-4 rounded-xl bg-surface/40 hover:bg-surface border border-border/70 hover:border-gold/40 transition-all duration-200 shadow-soft/30 hover:shadow-soft space-y-2 flex flex-col justify-between"
+                className={`group p-3.5 sm:p-4 rounded-xl border transition-all duration-200 shadow-soft/30 hover:shadow-soft space-y-2 flex flex-col justify-between ${
+                  isDoNothing
+                    ? "bg-gold/5 hover:bg-gold/10 border-gold/40 hover:border-gold/60"
+                    : "bg-surface/40 hover:bg-surface border-border/70 hover:border-gold/40"
+                }`}
               >
                 <div className="space-y-2">
                   {/* Header row: Icon & Category pill */}
@@ -153,6 +162,17 @@ export function PassionsSection({
                     {passion.desc[loc]}
                   </p>
                 </div>
+
+                {/* Special Highlight for Do Nothing Passion */}
+                {isDoNothing && (
+                  <div className="pt-2 border-t border-border/60 mt-1 flex items-center justify-between flex-wrap gap-1">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-gold font-medium">
+                      <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
+                      <span>{isBn ? "মোস্ট ফ্যাভোরিট প্যাশন এভার" : "Most Favorite Passion Ever"}</span>
+                    </span>
+                    <span className="text-[10.5px] font-mono text-muted/60 italic">Dolce Far Niente</span>
+                  </div>
+                )}
 
                 {/* Interactive Bookshelf Pill for Reading Passion */}
                 {isReading && books.length > 0 && (
