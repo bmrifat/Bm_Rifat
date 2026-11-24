@@ -30,8 +30,8 @@ const config: Config = {
         building: "var(--building)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-        bengali: ["var(--font-bengali)", "sans-serif"],
+        sans: ["Inter", "var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        bengali: ["'Anek Bangla'", "var(--font-bengali)", "sans-serif"],
       },
       maxWidth: {
         reading: "680px",

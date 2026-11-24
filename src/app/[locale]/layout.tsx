@@ -8,23 +8,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { AnalyticsTracker } from "@/components/analytics/AnalyticsTracker";
-import localFont from "next/font/local";
 import clsx from "clsx";
 import "@/styles/globals.css";
-
-const inter = localFont({
-  src: "../../fonts/Inter-Variable.ttf",
-  variable: "--font-inter",
-  display: "swap",
-  weight: "100 900",
-});
-
-const anekBangla = localFont({
-  src: "../../fonts/AnekBangla-Variable.ttf",
-  variable: "--font-bengali",
-  display: "swap",
-  weight: "100 800",
-});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -116,11 +101,7 @@ export default async function LocaleLayout({
       lang={locale}
       dir="ltr"
       suppressHydrationWarning
-      className={clsx(
-        inter.variable,
-        anekBangla.variable,
-        locale === "bn" ? "font-bengali" : "font-sans"
-      )}
+      className={locale === "bn" ? "font-bengali" : "font-sans"}
     >
       <body className="min-h-screen bg-bg text-text antialiased selection:bg-gold/20 dark:selection:bg-gold/30 selection:text-text relative">
         <ThemeProvider
