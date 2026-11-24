@@ -8,7 +8,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { AnalyticsTracker } from "@/components/analytics/AnalyticsTracker";
-import { Inter, Hind_Siliguri } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import clsx from "clsx";
 import "@/styles/globals.css";
 
@@ -18,11 +19,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const hindSiliguri = Hind_Siliguri({
-  weight: ["400", "500", "600"],
-  subsets: ["bengali", "latin"],
+const anekBangla = localFont({
+  src: "../../fonts/AnekBangla-Variable.ttf",
   variable: "--font-bengali",
   display: "swap",
+  weight: "100 800",
 });
 
 export function generateStaticParams() {
@@ -117,7 +118,7 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={clsx(
         inter.variable,
-        hindSiliguri.variable,
+        anekBangla.variable,
         locale === "bn" ? "font-bengali" : "font-sans"
       )}
     >
