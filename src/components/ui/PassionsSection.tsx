@@ -15,6 +15,7 @@ import {
   ExternalLink,
   Quote,
   Coffee,
+  Moon,
 } from "lucide-react";
 import { BookItem } from "@/data/books";
 
@@ -53,6 +54,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Heart,
   Users,
   Coffee,
+  Moon,
   Sparkles,
 };
 
@@ -165,12 +167,14 @@ export function PassionsSection({
 
                 {/* Special Highlight for Do Nothing Passion */}
                 {isDoNothing && (
-                  <div className="pt-2 border-t border-border/60 mt-1 flex items-center justify-between flex-wrap gap-1">
+                  <div className="pt-2.5 border-t border-gold/30 mt-1 flex items-center justify-between flex-wrap gap-2">
                     <span className="inline-flex items-center gap-1.5 text-[11px] font-mono text-gold font-medium">
-                      <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
-                      <span>{isBn ? "মোস্ট ফ্যাভোরিট প্যাশন এভার" : "Most Favorite Passion Ever"}</span>
+                      <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" aria-hidden="true" />
+                      <span>{isBn ? "সর্বকালের প্রিয়তম প্যাশন · সচেতন স্থৈর্য" : "Most Cherished Pursuit · Conscious Stillness"}</span>
                     </span>
-                    <span className="text-[10.5px] font-mono text-muted/60 italic">Dolce Far Niente</span>
+                    <span className="text-[11px] font-serif text-gold/80 italic tracking-wide">
+                      &ldquo;Il dolce far niente&rdquo;
+                    </span>
                   </div>
                 )}
 

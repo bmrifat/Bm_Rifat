@@ -85,19 +85,19 @@ export const profile = {
   passions: [
     {
       id: "do-nothing",
-      icon: "Coffee",
+      icon: "Moon",
       group: "mindfulness",
       title: {
-        en: "Doing Nothing (Dolce Far Niente)",
-        bn: "ডু নাথিং (কিছু না করার প্রশান্তি)",
+        en: "Il Dolce Far Niente (The Art of Doing Nothing)",
+        bn: "ডু নাথিং (ইল দলচে ফার নিয়েন্তে — কিছু না করার পরম শিল্প)",
       },
       category: {
-        en: "Most Favorite Ever",
-        bn: "সর্বকালের সবচেয়ে প্রিয়",
+        en: "No. 1 Passion · Sublime Stillness",
+        bn: "১ম প্যাশন · পরম নিস্তব্ধতা",
       },
       desc: {
-        en: "The conscious art of absolute stillness (Dolce Far Niente) — stepping back from infinite execution, letting the mind breathe, and savoring uninterrupted peace.",
-        bn: "কোনো তাড়া বা কাজের তাগিদ ছাড়া কেবল নিশ্চুপ হয়ে বসে থাকা—সব কোলাহল থামিয়ে মনকে মুক্ত করে দেওয়ার অনাবিল প্রশান্তি।",
+        en: "The intentional mastery of pure stillness — consciously stepping away from relentless architecture, quieting the operational noise, and letting thoughts drift freely without agenda or haste.",
+        bn: "প্রকৌশল ও অবিরাম উদ্ভাবনের কোলাহল থামিয়ে নিঃশব্দে স্থিত হওয়া—কোনো তাড়া, লক্ষ্য বা অ্যালগরিদম ছাড়া কেবল নিজের গভীর ভাবনায় ডুবে থাকার সচেতন প্রশান্তি।",
       },
     },
     {

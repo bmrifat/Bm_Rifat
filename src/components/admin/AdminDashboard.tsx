@@ -373,24 +373,21 @@ export const AdminDashboard: React.FC = () => {
                     {/* Pageviews bar */}
                     <div
                       style={{ height: `${viewsHeight}px` }}
-                      className={`w-3 sm:w-4 rounded-t-sm transition-all duration-300 ${
-                        isSelected ? "bg-gold ring-2 ring-gold/40" : "bg-gold/80 group-hover:bg-gold"
-                      }`}
+                      className={`w-3 sm:w-4 rounded-t-sm transition-all duration-300 ${isSelected ? "bg-gold ring-2 ring-gold/40" : "bg-gold/80 group-hover:bg-gold"
+                        }`}
                     />
                     {/* Uniques bar */}
                     <div
                       style={{ height: `${uniquesHeight}px` }}
-                      className={`w-2.5 sm:w-3 rounded-t-sm transition-all duration-300 ${
-                        isSelected ? "bg-accent ring-2 ring-accent/40" : "bg-accent/40 group-hover:bg-accent/70"
-                      }`}
+                      className={`w-2.5 sm:w-3 rounded-t-sm transition-all duration-300 ${isSelected ? "bg-accent ring-2 ring-accent/40" : "bg-accent/40 group-hover:bg-accent/70"
+                        }`}
                     />
                   </div>
 
                   {/* Day label */}
                   <span
-                    className={`text-[11px] font-mono uppercase pt-1 transition-colors ${
-                      isSelected ? "text-gold font-bold" : "text-muted group-hover:text-text"
-                    }`}
+                    className={`text-[11px] font-mono uppercase pt-1 transition-colors ${isSelected ? "text-gold font-bold" : "text-muted group-hover:text-text"
+                      }`}
                   >
                     {day.dayName}
                   </span>
@@ -484,13 +481,12 @@ export const AdminDashboard: React.FC = () => {
                 <div className="h-2 w-full bg-surface-subtle rounded-full overflow-hidden">
                   <div
                     style={{ width: `${dev.percentage}%` }}
-                    className={`h-full rounded-full ${
-                      dev.type === "Desktop"
-                        ? "bg-gold"
-                        : dev.type === "Mobile"
+                    className={`h-full rounded-full ${dev.type === "Desktop"
+                      ? "bg-gold"
+                      : dev.type === "Mobile"
                         ? "bg-accent"
                         : "bg-live"
-                    }`}
+                      }`}
                   />
                 </div>
               </div>
