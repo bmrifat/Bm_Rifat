@@ -6,19 +6,23 @@ import { ventures } from "@/data/ventures";
 import { timeline } from "@/data/timeline";
 import { books } from "@/data/books";
 import { galleryItems } from "@/data/gallery";
+import { posts } from "@/data/posts";
 import { StatusDot } from "@/components/ui/StatusDot";
 import { PortraitLightbox } from "@/components/ui/PortraitLightbox";
 import { PassionsSection } from "@/components/ui/PassionsSection";
 import { TimelineSection } from "@/components/ui/TimelineSection";
 import { GallerySection } from "@/components/ui/GallerySection";
+import { QuickContactBar } from "@/components/ui/QuickContactBar";
+import { ExecutiveProofStats } from "@/components/ui/ExecutiveProofStats";
+import { FeaturedEssaysSection } from "@/components/ui/FeaturedEssaysSection";
 import {
   ArrowUpRight,
-  Mail,
-  Github,
-  Linkedin,
-  Phone,
   ShieldCheck,
   Cpu,
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
 } from "@/components/ui/Icons";
 
 export default async function HomePage({
@@ -91,44 +95,18 @@ export default async function HomePage({
           </div>
         )}
 
-        {/* Quick Presence & Direct Connection */}
-        <div className="pt-1 flex flex-wrap items-center gap-2 text-xs">
-          <a
-            href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border/80 text-text hover:border-accent hover:text-accent shadow-soft transition-all"
-          >
-            <Mail className="w-3.5 h-3.5 text-muted/70" />
-            <span className="font-mono text-[12.5px]">{profile.email}</span>
-          </a>
+        {/* Executive Proof Metrics */}
+        <ExecutiveProofStats isBn={isBn} />
 
-          <a
-            href={`tel:${profile.phone}`}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border/80 text-text hover:border-accent hover:text-accent shadow-soft transition-all"
-          >
-            <Phone className="w-3.5 h-3.5 text-muted/70" />
-            <span className="font-mono text-[12.5px]">{profile.displayPhone}</span>
-          </a>
-
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border/80 text-muted hover:text-text hover:border-text/30 shadow-soft transition-all"
-          >
-            <Github className="w-3.5 h-3.5" />
-            <span>GitHub</span>
-          </a>
-
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-border/80 text-muted hover:text-text hover:border-text/30 shadow-soft transition-all"
-          >
-            <Linkedin className="w-3.5 h-3.5" />
-            <span>LinkedIn</span>
-          </a>
-        </div>
+        {/* Quick Presence & Direct Connection with Instant Copy */}
+        <QuickContactBar
+          email={profile.email}
+          phone={profile.phone}
+          displayPhone={profile.displayPhone}
+          github={profile.github}
+          linkedin={profile.linkedin}
+          isBn={isBn}
+        />
       </section>
 
       {/* 2. VENTURES (SOVEREIGN PLATFORMS) */}
@@ -219,12 +197,32 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* 3. CAREER MILESTONES & JOURNEY */}
-      {timeline && timeline.length > 0 && (
+      {/* 3. FEATURED ESSAYS & ARCHITECTURE CASE STUDIES */}
+      {posts && posts.length > 0 && (
         <section className="space-y-4 pt-10 border-t border-border/70">
           <div className="flex items-center justify-between pb-1">
             <div className="flex items-center gap-2">
               <span className="font-mono text-[11px] text-muted/60">03</span>
+              <span className="text-border">/</span>
+              <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
+                {isBn ? "প্রবন্ধ ও আর্কিটেকচার বিশ্লেষণ" : "Architectural Essays & Case Studies"}
+              </h2>
+            </div>
+            <span className="text-[11.5px] text-muted/60 font-mono">
+              {posts.length} {isBn ? "টি বিশ্লেষণ" : "Case Studies"}
+            </span>
+          </div>
+
+          <FeaturedEssaysSection posts={posts} isBn={isBn} />
+        </section>
+      )}
+
+      {/* 4. CAREER MILESTONES & JOURNEY */}
+      {timeline && timeline.length > 0 && (
+        <section className="space-y-4 pt-10 border-t border-border/70">
+          <div className="flex items-center justify-between pb-1">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-[11px] text-muted/60">04</span>
               <span className="text-border">/</span>
               <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
                 {isBn ? "ক্যারিয়ার জার্নি ও মাইলফলক" : "Journey & Career Milestones"}
@@ -239,12 +237,12 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* 4. VISUAL CHRONICLE & ACHIEVEMENTS GALLERY */}
+      {/* 5. VISUAL CHRONICLE & ACHIEVEMENTS GALLERY */}
       {galleryItems && galleryItems.length > 0 && (
-        <section className="space-y-4 pt-10 border-t border-border/70">
+        <section id="gallery" className="space-y-4 pt-10 border-t border-border/70 scroll-mt-24">
           <div className="flex items-center justify-between pb-1">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-[11px] text-muted/60">04</span>
+              <span className="font-mono text-[11px] text-muted/60">05</span>
               <span className="text-border">/</span>
               <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
                 {isBn ? "ভিজ্যুয়াল ক্রনিকল ও অর্জন গ্যালারি" : "Visual Chronicle & Milestones"}
@@ -259,10 +257,10 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* 5. CONVICTIONS & INTERESTS */}
+      {/* 6. CONVICTIONS & INTERESTS */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">05</span>
+          <span className="font-mono text-[11px] text-muted/60">06</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "দূরদর্শিতা ও আগ্রহের বিষয়" : "Convictions & Focus Areas"}
@@ -282,12 +280,12 @@ export default async function HomePage({
         </ul>
       </section>
 
-      {/* 6. PASSIONS & PERSONAL PURSUITS */}
+      {/* 7. PASSIONS & PERSONAL PURSUITS */}
       {profile.passions && (
         <section className="space-y-4 pt-10 border-t border-border/70">
           <div className="flex items-center justify-between pb-1">
             <div className="flex items-center gap-2">
-              <span className="font-mono text-[11px] text-muted/60">06</span>
+              <span className="font-mono text-[11px] text-muted/60">07</span>
               <span className="text-border">/</span>
               <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
                 {isBn ? "প্যাশন ও ব্যক্তিগত অনুরাগ" : "Passions & Personal Pursuits"}
@@ -307,10 +305,10 @@ export default async function HomePage({
         </section>
       )}
 
-      {/* 7. ALSO (INSTITUTIONAL ROLES & VENTURES) */}
+      {/* 8. ALSO (INSTITUTIONAL ROLES & VENTURES) */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">07</span>
+          <span className="font-mono text-[11px] text-muted/60">08</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "প্রাতিষ্ঠানিক দায়িত্ব ও ভূমিকা" : "Institutional Roles"}
@@ -335,11 +333,11 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* 8. NOW */}
+      {/* 9. NOW */}
       <section className="space-y-4 pt-10 border-t border-border/70">
         <div className="flex items-center justify-between pb-1">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-[11px] text-muted/60">08</span>
+            <span className="font-mono text-[11px] text-muted/60">09</span>
             <span className="text-border">/</span>
             <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
               {isBn ? "বর্তমান রোডম্যাপ ও ব্যস্ততা" : "Active Focus"}
@@ -360,10 +358,10 @@ export default async function HomePage({
         </ul>
       </section>
 
-      {/* 9. ELSEWHERE */}
+      {/* 10. ELSEWHERE */}
       <section className="space-y-3 pt-10 border-t border-border/70">
         <div className="flex items-center gap-2 pb-1">
-          <span className="font-mono text-[11px] text-muted/60">09</span>
+          <span className="font-mono text-[11px] text-muted/60">10</span>
           <span className="text-border">/</span>
           <h2 className="text-[11.5px] uppercase tracking-[0.14em] text-muted/90 font-semibold">
             {isBn ? "সরাসরি যোগাযোগের মাধ্যম" : "Direct Channels"}
@@ -377,7 +375,7 @@ export default async function HomePage({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface border border-border/80 text-xs font-medium text-muted hover:text-text hover:border-text/40 shadow-soft transition-all"
           >
-            <Github className="w-3.5 h-3.5" />
+            <Github className="w-3.5 h-3.5" aria-hidden="true" />
             <span>GitHub</span>
           </a>
 
@@ -387,7 +385,7 @@ export default async function HomePage({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface border border-border/80 text-xs font-medium text-muted hover:text-text hover:border-text/40 shadow-soft transition-all"
           >
-            <Linkedin className="w-3.5 h-3.5" />
+            <Linkedin className="w-3.5 h-3.5" aria-hidden="true" />
             <span>LinkedIn</span>
           </a>
 
@@ -395,7 +393,7 @@ export default async function HomePage({
             href={`mailto:${profile.email}`}
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface border border-border/80 text-xs font-medium text-text hover:text-accent hover:border-accent shadow-soft transition-all"
           >
-            <Mail className="w-3.5 h-3.5 text-muted/70" />
+            <Mail className="w-3.5 h-3.5 text-muted/70" aria-hidden="true" />
             <span>Email</span>
           </a>
 
@@ -405,7 +403,7 @@ export default async function HomePage({
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface border border-border/80 text-xs font-medium text-text hover:text-live hover:border-live shadow-soft transition-all"
           >
-            <Phone className="w-3.5 h-3.5 text-live" />
+            <Phone className="w-3.5 h-3.5 text-live" aria-hidden="true" />
             <span>WhatsApp</span>
           </a>
         </div>

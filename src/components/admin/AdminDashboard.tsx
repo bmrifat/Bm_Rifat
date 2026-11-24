@@ -18,6 +18,7 @@ import {
   Cpu,
   Mail,
   ArrowUpRight,
+  AlertTriangle,
 } from "@/components/ui/Icons";
 
 export const AdminDashboard: React.FC = () => {
@@ -159,7 +160,7 @@ export const AdminDashboard: React.FC = () => {
 
             {authError && (
               <div className="p-3 rounded-lg bg-building/10 border border-building/30 text-[12.5px] text-building flex items-center gap-2">
-                <span>⚠️</span>
+                <AlertTriangle className="w-4 h-4 text-building shrink-0" aria-hidden="true" />
                 <span>{authError}</span>
               </div>
             )}

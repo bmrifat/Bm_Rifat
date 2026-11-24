@@ -2,12 +2,15 @@
 
 import React from "react";
 import { Link, usePathname } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { LangSwitch } from "@/components/ui/LangSwitch";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { CommandPalette } from "@/components/ui/CommandPalette";
 
 export const Header: React.FC = () => {
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const isBn = locale === "bn";
   const pathname = usePathname();
 
   const isVentures = pathname.startsWith("/ventures");
@@ -26,7 +29,7 @@ export const Header: React.FC = () => {
       </Link>
 
       {/* Right Nav */}
-      <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-muted">
+      <nav className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-2 text-[13px] text-muted">
         <Link
           href="/ventures"
           className={
@@ -57,6 +60,9 @@ export const Header: React.FC = () => {
         >
           {t("contact")}
         </Link>
+
+        {/* Command Palette Trigger */}
+        <CommandPalette isBn={isBn} locale={locale} />
 
         <span className="text-border select-none" aria-hidden="true">
           ·
