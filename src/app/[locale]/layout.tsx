@@ -8,15 +8,15 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { AnalyticsTracker } from "@/components/analytics/AnalyticsTracker";
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import clsx from "clsx";
 import "@/styles/globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "../../fonts/Inter-Variable.ttf",
   variable: "--font-inter",
   display: "swap",
+  weight: "100 900",
 });
 
 const anekBangla = localFont({
